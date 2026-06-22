@@ -8,8 +8,16 @@ import sarahProfile from '../assets/sarah_profile.png'
 import courseStress from '../assets/course_stress.png'
 import courseComfort from '../assets/course_comfort.png'
 import courseDesk from '../assets/course_desk.png'
+import CalmSoundsCard from './CalmSoundsCard'
 
-export default function Home() {
+export default function Home({
+  activeAmbientSound,
+  setActiveAmbientSound,
+  isAmbientPlaying,
+  setIsAmbientPlaying,
+  ambientVolume,
+  setAmbientVolume
+}) {
   // Interactive States
   const [selectedMood, setSelectedMood] = useState('Growing')
   const [isAudioPlaying, setIsAudioPlaying] = useState(false)
@@ -42,32 +50,120 @@ export default function Home() {
 
   return (
     <div className="bg-white text-gray-900 font-sans selection:bg-green-100 selection:text-green-800">
-      
+
       {/* SECTION 1: HERO SECTION */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-6">
-        <div 
-          className="relative rounded-[32px] overflow-hidden min-h-[540px] md:min-h-[580px] lg:min-h-[640px] flex items-center bg-cover bg-center"
+      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-6 relative">
+        <div
+          className="relative rounded-[32px] overflow-hidden flex items-center bg-cover bg-center min-h-[580px] lg:min-h-[660px] pb-28 lg:pb-32"
           style={{ backgroundImage: `url(${sunsetFamily})` }}
         >
           {/* Soft overlay to ensure readability */}
-          <div className="absolute inset-0 bg-black/25"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
 
-          <div className="relative z-10 max-w-2xl pl-8 md:pl-16 pr-8 text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.15] mb-6 tracking-tight">
-              Your Whole-Life<br />Wellness Platform
-            </h1>
-            <p className="text-white/95 text-base md:text-lg font-light leading-relaxed mb-8 max-w-lg">
-              Personal Development-ADHD Trauma Care Retirement Planning AI Coaching -Kids & Seniors
-            </p>
-            
-            <button className="inline-flex items-center gap-3 bg-white text-gray-900 font-semibold pl-6 pr-2 py-2 rounded-full hover:bg-gray-100 active:scale-95 transition duration-200 cursor-pointer shadow-lg border-none">
-              <span className="text-sm tracking-wide">Explore Platform</span>
-              <span className="w-9 h-9 rounded-full bg-[#439c47] flex items-center justify-center text-white">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                </svg>
-              </span>
-            </button>
+          {/* Floating Coach Badges
+          <div className="absolute top-[30%] left-[34%] bg-[#1e1b18]/70 backdrop-blur-xs text-white border border-white/10 rounded-full px-3 py-1.5 flex items-center gap-1 shadow-lg hidden md:flex select-none z-10">
+            <span className="w-5 h-5 rounded-full bg-gray-500 text-white flex items-center justify-center text-[10px] font-bold">A</span>
+            <div className="w-5 h-5 rounded-full overflow-hidden border border-white/20 -ml-1.5">
+              <img src={sarahProfile} className="w-full h-full object-cover" alt="badge" />
+            </div>
+          </div>
+          <div className="absolute bottom-[40%] left-[19%] w-9 h-9 rounded-full overflow-hidden border-2 border-white shadow-lg hidden md:block select-none z-10">
+            <img src={marcusProfile} className="w-full h-full object-cover" alt="badge" />
+          </div> */}
+
+          <div className="relative z-10 w-full flex flex-col lg:flex-row justify-between items-center gap-12 px-6 md:px-16 py-12">
+            {/* Left Content */}
+            <div className="text-white max-w-2xl text-left select-none">
+              <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold leading-[1.12] mb-6 tracking-tight">
+                Your Whole-Life<br />Wellness Platform
+              </h1>
+              <p className="text-white/90 text-sm md:text-[17px] font-light leading-relaxed max-w-xl">
+                Personal Development-ADHD Trauma Care Retirement Planning AI Coaching -Kids & Seniors
+              </p>
+            </div>
+
+            {/* Right Content - Calm Sounds Card */}
+            {/* <div className="shrink-0 relative z-10 self-center">
+              <CalmSoundsCard
+                activeAmbientSound={activeAmbientSound}
+                setActiveAmbientSound={setActiveAmbientSound}
+                isAmbientPlaying={isAmbientPlaying}
+                setIsAmbientPlaying={setIsAmbientPlaying}
+                ambientVolume={ambientVolume}
+                setAmbientVolume={setAmbientVolume}
+              />
+            </div> */}
+          </div>
+        </div>
+      </section>
+
+      {/* Overlapping Category Boxes */}
+      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 -mt-24 pb-8 relative z-20 select-none">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {/* Box 1: Personal Development */}
+          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
+              <span className="text-xs">🧭</span>
+              <h4 className="font-bold text-xs uppercase tracking-wider">Personal Development</h4>
+            </div>
+            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
+              <li>• Personalised AI Assessments</li>
+              <li>• AI Executive Function Coach</li>
+              <li>• Focus tools, habit stacking, time-blocking</li>
+            </ul>
+          </div>
+
+          {/* Box 2: ADHD */}
+          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
+              <span className="text-xs">⚡</span>
+              <h4 className="font-bold text-xs uppercase tracking-wider">ADHD</h4>
+            </div>
+            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
+              <li>• ADHD-specific learning pathways</li>
+              <li>• Behavioural pattern tracking over time</li>
+            </ul>
+          </div>
+
+          {/* Box 3: Mental Wellness */}
+          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
+              <span className="text-xs">🌱</span>
+              <h4 className="font-bold text-xs uppercase tracking-wider">Mental Wellness</h4>
+            </div>
+            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
+              <li>• AI Wellness Coach</li>
+              <li>• Audio & text journal with sentiment analysis</li>
+            </ul>
+          </div>
+
+          {/* Box 4: Trauma */}
+          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
+              <span className="text-xs">🛡️</span>
+              <h4 className="font-bold text-xs uppercase tracking-wider">Trauma</h4>
+            </div>
+            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
+              <li>• Trauma-informed learning</li>
+              <li>• Grounding & regulation exercises</li>
+              <li>• Crisis-aware escalation protocol</li>
+              <li>• EMDR, somatic therapy guides</li>
+            </ul>
+          </div>
+
+          {/* Box 5: Retirement & Life plan */}
+          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
+              <span className="text-xs">👵</span>
+              <h4 className="font-bold text-xs uppercase tracking-wider">Retirement & Life plan</h4>
+            </div>
+            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
+              <li>• AI Retirement Planning Advisor</li>
+              <li>• Pension, savings & investment guidance</li>
+              <li>• Personalised financial scenario modelling</li>
+              <li>• Legacy planning & estate conversations</li>
+              <li>• Senior wellbeing & cognitive health tools</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -86,18 +182,18 @@ export default function Home() {
 
         {/* 5-Column Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-          
+
           {/* Card 1: Al Nadeem */}
           <div className="bg-white border border-gray-100 rounded-[24px] p-6 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
             <div className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5 bg-green-50">
                 <svg className="w-7 h-7 text-[#439c47]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                 </svg>
               </div>
               <h3 className="font-bold text-[#111827] text-lg mb-1">Al Nadeem</h3>
               <p className="text-gray-400 text-xs mb-4">Trauma & Wellness Coach</p>
-              
+
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
                 Adults processing trauma, anxiety, grief
               </div>
@@ -140,7 +236,7 @@ export default function Home() {
               </div>
               <h3 className="font-bold text-[#111827] text-lg mb-1">Al Kabeer</h3>
               <p className="text-gray-400 text-xs mb-4">ADHD & Focus Coach</p>
-              
+
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
                 Adults & teens with ADHD or executive function needs
               </div>
@@ -183,7 +279,7 @@ export default function Home() {
               </div>
               <h3 className="font-bold text-[#111827] text-lg mb-1">The Captin</h3>
               <p className="text-gray-400 text-xs mb-4">Retirement & Life Planning AI</p>
-              
+
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
                 Adults 50+ planning retirement, life transitions
               </div>
@@ -226,7 +322,7 @@ export default function Home() {
               </div>
               <h3 className="font-bold text-[#111827] text-lg mb-1">Buahmad</h3>
               <p className="text-gray-400 text-xs mb-4">Children's Emotional AI</p>
-              
+
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
                 Children 6–16 and their parents
               </div>
@@ -264,12 +360,12 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5 bg-green-50">
                 <svg className="w-7 h-7 text-[#439c47]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                 </svg>
               </div>
               <h3 className="font-bold text-[#111827] text-lg mb-1">Al hakeem</h3>
               <p className="text-gray-400 text-xs mb-4">Senior Wellness AI</p>
-              
+
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
                 Retirees 65+ for wellbeing, memory, and social connection
               </div>
@@ -309,7 +405,7 @@ export default function Home() {
       {/* SECTION 3: COMPREHENSIVE SUPPORT FOR EVERY STAGE OF LIFE */}
       <section className="bg-gray-50/50 py-20 md:py-24 border-t border-gray-100">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-12">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-4">
               Comprehensive support for every stage of life
@@ -321,7 +417,7 @@ export default function Home() {
 
           {/* Asymmetrical Grid Top Row */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
-            
+
             {/* Card Left: Personal Dev & ADHD (lg:col-span-4) */}
             <div className="lg:col-span-4 bg-[#f4fdf5]/60 border border-green-100/50 rounded-[28px] p-8 flex flex-col justify-between hover:shadow-md transition duration-300">
               <div>
@@ -329,7 +425,7 @@ export default function Home() {
                   Efficiency
                 </span>
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-4">
-                  Personal<br />Dev & ADHD
+                  Personal<br />Development & ADHD
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-8">
                   Habit stacking and neurodiverse-friendly focus tools to master your attention.
@@ -361,7 +457,7 @@ export default function Home() {
                   <p className="text-gray-500 text-sm leading-relaxed mb-6">
                     Science-backed grounding techniques and private AI-guided journaling to process emotions safely.
                   </p>
-                  
+
                   {/* Checklist */}
                   <div className="space-y-3 mb-8">
                     <div className="flex items-center gap-2 text-sm text-gray-800">
@@ -376,16 +472,16 @@ export default function Home() {
                 </div>
 
                 <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-gray-900 hover:text-[#3e9447] transition-colors group">
-                  Explore Healing 
+                  Explore Healing
                   <span className="transform group-hover:translate-x-1 transition-transform">➔</span>
                 </a>
               </div>
 
               {/* Sand Stones Image Area */}
               <div className="w-full md:w-64 h-56 md:h-auto rounded-2xl overflow-hidden shadow-sm flex-shrink-0">
-                <img 
-                  src={zenStones} 
-                  alt="Zen stones" 
+                <img
+                  src={zenStones}
+                  alt="Zen stones"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -395,11 +491,11 @@ export default function Home() {
 
           {/* Bottom Card: Retirement & Life Planning */}
           <div className="bg-white border border-gray-100 rounded-[28px] p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 lg:gap-16 justify-between hover:shadow-md transition duration-300">
-            
+
             {/* Left Box: Milestone Modeling Card */}
             <div className="w-full md:w-[360px] bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex-shrink-0">
               <h4 className="text-[13px] font-bold text-gray-900 mb-4">Milestone Scenario Modeling</h4>
-              
+
               <div className="space-y-4">
                 {/* Milestone 1 */}
                 <div>
@@ -436,7 +532,7 @@ export default function Home() {
               <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-xl">
                 Sophisticated pension guidance and lifestyle scenario modeling for your next chapter.
               </p>
-              
+
               <button className="bg-[#439c47] hover:bg-[#38843c] text-white text-xs font-semibold py-3 px-6 rounded-full transition duration-200 cursor-pointer border-none">
                 Map Your Future
               </button>
@@ -450,7 +546,7 @@ export default function Home() {
 
       {/* SECTION 4: WE HANDEL YOU AND GUIDE YOU IN YOUR JOURNEY */}
       <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-20 md:py-24">
-        
+
         <div className="text-center max-w-3xl mx-auto mb-16">
           {/* Typo preserved exactly as requested in the screenshot: "We Handel You..." */}
           <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-4">
@@ -463,7 +559,7 @@ export default function Home() {
 
         {/* 5-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
-          
+
           {/* Card 1: Financial Security */}
           <div className="bg-gray-50/50 border border-gray-100/50 rounded-[20px] p-6 flex flex-col hover:shadow-md transition duration-300">
             <div className="w-11 h-11 rounded-lg bg-[#439c47] flex items-center justify-center text-white mb-6">
@@ -471,9 +567,9 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            
+
             <h3 className="font-bold text-gray-900 text-base mb-4">Financial Security</h3>
-            
+
             <ul className="text-xs text-gray-500 space-y-4 leading-relaxed list-none p-0">
               <li>Build long-term financial confidence</li>
               <li>Understand pensions and savings</li>
@@ -490,9 +586,9 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
               </svg>
             </div>
-            
+
             <h3 className="font-bold text-gray-900 text-base mb-4">Future Goals</h3>
-            
+
             <ul className="text-xs text-gray-500 space-y-4 leading-relaxed list-none p-0">
               <li>Define retirement aspirations</li>
               <li>Plan meaningful life experiences</li>
@@ -508,9 +604,9 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            
+
             <h3 className="font-bold text-white text-base mb-4">Life Transitions</h3>
-            
+
             <ul className="text-xs text-white/90 space-y-4 leading-relaxed list-none p-0">
               <li>Prepare for retirement changes</li>
               <li>Navigate major life decisions</li>
@@ -526,9 +622,9 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </div>
-            
+
             <h3 className="font-bold text-gray-900 text-base mb-4">Wellbeing & Lifestyle</h3>
-            
+
             <ul className="text-xs text-gray-500 space-y-4 leading-relaxed list-none p-0">
               <li>Plan for healthy aging</li>
               <li>Maintain independence</li>
@@ -544,9 +640,9 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>
-            
+
             <h3 className="font-bold text-gray-900 text-base mb-4">Legacy & Impact</h3>
-            
+
             <ul className="text-xs text-gray-500 space-y-4 leading-relaxed list-none p-0">
               <li>Protect family interests</li>
               <li>Plan future support strategies</li>
@@ -562,7 +658,7 @@ export default function Home() {
       {/* SECTION 5: YOUR AI COACH ALWAYS AVAILABLE FOR YOU (New Section 1) */}
       <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-20">
         <div className="bg-[#f4fdf5]/35 border border-green-100/30 rounded-[32px] overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch">
-          
+
           {/* Left Side Content */}
           <div className="lg:col-span-6 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <span className="text-[#3e9447] text-xs font-bold uppercase tracking-wider block mb-4">
@@ -596,7 +692,7 @@ export default function Home() {
           {/* Right Side Chat Mockup */}
           <div className="lg:col-span-6 bg-[#f4fdf5]/60 p-8 flex items-center justify-center border-l lg:border-l border-t lg:border-t-0 border-green-100/30">
             <div className="bg-white rounded-2xl border border-gray-100/80 shadow-md shadow-green-100/10 w-full max-w-md overflow-hidden flex flex-col h-[400px]">
-              
+
               {/* Chat Header */}
               <div className="bg-white px-5 py-4 border-b border-gray-100 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-[#439c47] flex items-center justify-center text-white text-sm font-bold shadow-xs">
@@ -613,16 +709,15 @@ export default function Home() {
               {/* Chat Messages */}
               <div className="flex-1 overflow-y-auto p-5 space-y-4 bg-gray-50/50">
                 {chatMessages.map((msg, idx) => (
-                  <div 
-                    key={idx} 
+                  <div
+                    key={idx}
                     className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
-                    <div 
-                      className={`max-w-[85%] rounded-[20px] p-3 text-xs leading-relaxed ${
-                        msg.sender === 'user' 
-                          ? 'bg-[#f0fdf4] text-[#2f7a37] rounded-tr-none' 
-                          : 'bg-white text-gray-700 border border-gray-100 rounded-tl-none shadow-2xs'
-                      }`}
+                    <div
+                      className={`max-w-[85%] rounded-[20px] p-3 text-xs leading-relaxed ${msg.sender === 'user'
+                        ? 'bg-[#f0fdf4] text-[#2f7a37] rounded-tr-none'
+                        : 'bg-white text-gray-700 border border-gray-100 rounded-tl-none shadow-2xs'
+                        }`}
                     >
                       {msg.text}
                     </div>
@@ -632,15 +727,15 @@ export default function Home() {
 
               {/* Chat Input */}
               <form onSubmit={handleSendChatMessage} className="bg-white p-4 border-t border-gray-100 flex items-center gap-2">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={chatMessageInput}
                   onChange={(e) => setChatMessageInput(e.target.value)}
-                  placeholder="Type your message..." 
+                  placeholder="Type your message..."
                   className="flex-1 bg-white border border-gray-200 rounded-full py-2.5 px-4 text-xs text-gray-700 placeholder-gray-400 focus:outline-none focus:border-[#439c47]"
                 />
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="w-9 h-9 rounded-full bg-[#439c47] hover:bg-[#38843c] flex items-center justify-center text-white border-none cursor-pointer flex-shrink-0"
                 >
                   <svg className="w-4 h-4 transform rotate-90" fill="currentColor" viewBox="0 0 24 24">
@@ -659,7 +754,7 @@ export default function Home() {
       {/* SECTION 6: REFLECTIVE JOURNAL / WELLNESS AUDIO / GROWTH PULSE (New Section 2) */}
       <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-          
+
           {/* Card 1: Reflective Journal (lg:col-span-6) */}
           <div className="lg:col-span-5 bg-[#f4fdf5]/40 border border-green-100/20 rounded-[28px] p-8 flex flex-col justify-between hover:shadow-md transition duration-300">
             <div>
@@ -675,44 +770,40 @@ export default function Home() {
               {/* Mood Selector Row */}
               <div className="grid grid-cols-4 gap-2 mb-8">
                 {/* Calm */}
-                <button 
+                <button
                   onClick={() => setSelectedMood('Calm')}
-                  className={`bg-white rounded-2xl p-3 flex flex-col items-center justify-center cursor-pointer transition ${
-                    selectedMood === 'Calm' ? 'border-2 border-[#439c47]' : 'border border-gray-100 hover:bg-gray-50/50'
-                  }`}
+                  className={`bg-white rounded-2xl p-3 flex flex-col items-center justify-center cursor-pointer transition ${selectedMood === 'Calm' ? 'border-2 border-[#439c47]' : 'border border-gray-100 hover:bg-gray-50/50'
+                    }`}
                 >
                   <span className="text-2xl mb-2">😌</span>
                   <span className="text-[10px] font-bold text-gray-700">Calm</span>
                 </button>
 
                 {/* Growing */}
-                <button 
+                <button
                   onClick={() => setSelectedMood('Growing')}
-                  className={`bg-white rounded-2xl p-3 flex flex-col items-center justify-center cursor-pointer transition ${
-                    selectedMood === 'Growing' ? 'border-2 border-[#439c47]' : 'border border-gray-100 hover:bg-gray-50/50'
-                  }`}
+                  className={`bg-white rounded-2xl p-3 flex flex-col items-center justify-center cursor-pointer transition ${selectedMood === 'Growing' ? 'border-2 border-[#439c47]' : 'border border-gray-100 hover:bg-gray-50/50'
+                    }`}
                 >
                   <span className="text-2xl mb-2">🌱</span>
                   <span className="text-[10px] font-bold text-gray-700">Growing</span>
                 </button>
 
                 {/* Foggy */}
-                <button 
+                <button
                   onClick={() => setSelectedMood('Foggy')}
-                  className={`bg-white rounded-2xl p-3 flex flex-col items-center justify-center cursor-pointer transition ${
-                    selectedMood === 'Foggy' ? 'border-2 border-[#439c47]' : 'border border-gray-100 hover:bg-gray-50/50'
-                  }`}
+                  className={`bg-white rounded-2xl p-3 flex flex-col items-center justify-center cursor-pointer transition ${selectedMood === 'Foggy' ? 'border-2 border-[#439c47]' : 'border border-gray-100 hover:bg-gray-50/50'
+                    }`}
                 >
                   <span className="text-2xl mb-2">🌫️</span>
                   <span className="text-[10px] font-bold text-gray-700">Foggy</span>
                 </button>
 
                 {/* Charged */}
-                <button 
+                <button
                   onClick={() => setSelectedMood('Charged')}
-                  className={`bg-white rounded-2xl p-3 flex flex-col items-center justify-center cursor-pointer transition ${
-                    selectedMood === 'Charged' ? 'border-2 border-[#439c47]' : 'border border-gray-100 hover:bg-gray-50/50'
-                  }`}
+                  className={`bg-white rounded-2xl p-3 flex flex-col items-center justify-center cursor-pointer transition ${selectedMood === 'Charged' ? 'border-2 border-[#439c47]' : 'border border-gray-100 hover:bg-gray-50/50'
+                    }`}
                 >
                   <span className="text-2xl mb-2">🔋</span>
                   <span className="text-[10px] font-bold text-gray-700">Charged</span>
@@ -751,17 +842,17 @@ export default function Home() {
                 <button className="bg-transparent border-none cursor-pointer hover:text-[#439c47] p-1">
                   <span className="text-lg font-bold">⟲</span>
                 </button>
-                <button 
+                <button
                   onClick={() => setIsAudioPlaying(!isAudioPlaying)}
                   className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-50 p-0"
                 >
                   {isAudioPlaying ? (
                     <svg className="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
                     </svg>
                   ) : (
                     <svg className="w-5 h-5 text-gray-900 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
+                      <path d="M8 5v14l11-7z" />
                     </svg>
                   )}
                 </button>
@@ -771,7 +862,7 @@ export default function Home() {
               </div>
             </div>
 
-            <button 
+            <button
               onClick={() => setIsAudioPlaying(!isAudioPlaying)}
               className="bg-white hover:bg-gray-50 text-[#439c47] font-semibold text-xs py-3 rounded-full transition duration-200 cursor-pointer border-none w-full"
             >
@@ -783,7 +874,7 @@ export default function Home() {
           <div className="lg:col-span-3 bg-[#f4fdf5]/40 border border-green-100/20 rounded-[28px] p-6 md:p-8 flex flex-col justify-between hover:shadow-md transition duration-300">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Growth Pulse</h3>
-              
+
               <div className="space-y-5">
                 {/* Metric 1 */}
                 <div className="flex justify-between items-center text-xs">
@@ -850,7 +941,7 @@ export default function Home() {
 
       {/* SECTION 7: FIND THE RIGHT PATH FOR THIS MOMENT (New Section 3) */}
       <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-20">
-        
+
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
             <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-3">
@@ -869,7 +960,7 @@ export default function Home() {
 
         {/* 4 Course Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          
+
           {/* Course Card 1 */}
           <div className="bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-md transition duration-300 flex flex-col justify-between">
             <div>
@@ -1093,7 +1184,7 @@ export default function Home() {
       {/* SECTION 8: BOOK A LIVE SESSION WITH AN EXPERT COACH (New Section 4) */}
       <section className="bg-[#fcfdfd] py-16 md:py-24 border-t border-gray-50">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-12">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-4">
               Book a Live Session with an Expert Coach
@@ -1105,7 +1196,7 @@ export default function Home() {
 
           {/* Interactive Row Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-            
+
             {/* Card Left: Weekly Schedule */}
             <div className="lg:col-span-4 bg-white border border-gray-100 rounded-[28px] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition">
               <div>
@@ -1129,67 +1220,60 @@ export default function Home() {
                   <span className="text-[10px] font-bold text-gray-400">S</span>
 
                   {/* Date items */}
-                  <button 
+                  <button
                     onClick={() => setSelectedCalendarDay(12)}
-                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${
-                      selectedCalendarDay === 12 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
-                    }`}
+                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${selectedCalendarDay === 12 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
+                      }`}
                   >
                     12
                   </button>
-                  
-                  <button 
+
+                  <button
                     onClick={() => setSelectedCalendarDay(13)}
-                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${
-                      selectedCalendarDay === 13 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
-                    }`}
+                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${selectedCalendarDay === 13 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
+                      }`}
                   >
                     13
                   </button>
-                  
+
                   {/* Highlighted Day (14) */}
-                  <button 
+                  <button
                     onClick={() => setSelectedCalendarDay(14)}
-                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${
-                      selectedCalendarDay === 14 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
-                    }`}
+                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${selectedCalendarDay === 14 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
+                      }`}
                   >
                     14
                   </button>
-                  
-                  <button 
+
+                  <button
                     onClick={() => setSelectedCalendarDay(15)}
-                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${
-                      selectedCalendarDay === 15 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
-                    }`}
+                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${selectedCalendarDay === 15 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
+                      }`}
                   >
                     15
                   </button>
-                  
-                  <button 
+
+                  <button
                     onClick={() => setSelectedCalendarDay(16)}
-                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${
-                      selectedCalendarDay === 16 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
-                    }`}
+                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${selectedCalendarDay === 16 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
+                      }`}
                   >
                     16
                   </button>
-                  
+
                   {/* Accent Highlighted Day (17) */}
-                  <button 
+                  <button
                     onClick={() => setSelectedCalendarDay(17)}
-                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${
-                      selectedCalendarDay === 17 ? 'bg-[#d8f9ce] text-[#2c7a31]' : 'bg-transparent text-gray-700 hover:bg-gray-50'
-                    }`}
+                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${selectedCalendarDay === 17 ? 'bg-[#d8f9ce] text-[#2c7a31]' : 'bg-transparent text-gray-700 hover:bg-gray-50'
+                      }`}
                   >
                     17
                   </button>
 
-                  <button 
+                  <button
                     onClick={() => setSelectedCalendarDay(18)}
-                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${
-                      selectedCalendarDay === 18 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
-                    }`}
+                    className={`h-9 rounded-lg text-xs font-bold cursor-pointer transition border-none flex items-center justify-center ${selectedCalendarDay === 18 ? 'bg-[#439c47] text-white shadow-xs' : 'bg-transparent text-gray-700 hover:bg-gray-50'
+                      }`}
                   >
                     18
                   </button>
@@ -1266,7 +1350,7 @@ export default function Home() {
       {/* SECTION 9: READY TO BEGIN YOUR HEALING JOURNEY (CTA BLOCK) */}
       <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
         <div className="bg-[#439c47] rounded-[32px] p-12 md:p-16 lg:p-20 text-center text-white relative overflow-hidden shadow-lg shadow-green-100">
-          
+
           <div className="absolute top-[-100px] left-[-100px] w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
           <div className="absolute bottom-[-100px] right-[-100px] w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -1275,7 +1359,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
               Ready to begin your healing journey?
             </h2>
-            
+
             {/* Typo preserved exactly as requested in screenshot: "Insprairty AI" */}
             <p className="text-white/90 text-sm md:text-base mb-8 max-w-md mx-auto">
               Join thousands of others finding clarity and peace with Insprairty AI
@@ -1286,7 +1370,7 @@ export default function Home() {
               <button className="bg-transparent border border-white hover:bg-white/5 text-white font-semibold text-xs py-3.5 px-8 rounded-full transition duration-200 cursor-pointer w-full sm:w-auto">
                 Talk to an Expert
               </button>
-              
+
               {/* Typo preserved exactly as requested in screenshot: "Get Strated Now" */}
               <button className="bg-white hover:bg-gray-100 text-[#439c47] font-bold text-xs py-3.5 px-8 rounded-full transition duration-200 cursor-pointer border-none w-full sm:w-auto">
                 Get Strated Now
@@ -1300,7 +1384,7 @@ export default function Home() {
 
       {/* SECTION 10: FROM OUR COMMUNITY (TESTIMONIALS) */}
       <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24">
-        
+
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-3 tracking-tight">
             From Our Community
@@ -1313,7 +1397,7 @@ export default function Home() {
 
         {/* 3 Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
+
           {/* Testimonial 1 */}
           {/* Typo preserved: "Inspairty AI" */}
           <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-xs hover:shadow-md transition flex flex-col justify-between min-h-[200px]">

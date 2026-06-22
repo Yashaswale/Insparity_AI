@@ -11,29 +11,7 @@ export default function Footer({ setCurrentPage }) {
               onClick={() => setCurrentPage && setCurrentPage('home')}
               className="flex items-center gap-2 mb-4 cursor-pointer"
             >
-              <svg 
-                width="24" 
-                height="28" 
-                viewBox="0 0 28 34" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-7 flex-shrink-0"
-              >
-                <path 
-                  d="M14 0C14 0 28 10 28 20.5C28 26.5 23 31.5 17 33.5C14.5 34.3 14 31 14 31C14 31 13.5 34.3 11 33.5C5 31.5 0 26.5 0 20.5C0 10 14 0 14 0Z" 
-                  fill="url(#leaf-grad-footer-site)" 
-                />
-                <defs>
-                  <linearGradient id="leaf-grad-footer-site" x1="0" y1="0" x2="28" y2="34" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#8be28f" />
-                    <stop offset="50%" stopColor="#4bb551" />
-                    <stop offset="100%" stopColor="#2c7c31" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span className="font-bold text-lg tracking-tight text-[#111827]">
-                Insparity<span className="text-[#3e9447]">AI</span>
-              </span>
+              <img src="/Insparity AI logo.png" alt="Insparity AI" className="h-9 w-auto object-contain" />
             </div>
             
             <p className="text-gray-500 text-xs leading-relaxed mb-6 max-w-[240px]">

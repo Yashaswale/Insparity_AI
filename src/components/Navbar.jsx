@@ -1,6 +1,19 @@
 import { useState } from 'react'
+import CalmSoundsCard from './CalmSoundsCard'
 
-export default function Navbar({ setCurrentPage }) {
+export default function Navbar({ 
+  setCurrentPage, 
+  isLoggedIn, 
+  userEmail, 
+  handleLogout,
+  activeAmbientSound,
+  setActiveAmbientSound,
+  isAmbientPlaying,
+  setIsAmbientPlaying,
+  ambientVolume,
+  setAmbientVolume
+}) {
+  const [showSoundsOverlay, setShowSoundsOverlay] = useState(false)
   const [isCoachDropdownOpen, setIsCoachDropdownOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState(null)
 
@@ -13,38 +26,7 @@ export default function Navbar({ setCurrentPage }) {
           onClick={() => setCurrentPage('home')} 
           className="flex items-center gap-2 cursor-pointer"
         >
-          <svg 
-            width="28" 
-            height="34" 
-            viewBox="0 0 28 34" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-7 h-9 flex-shrink-0"
-          >
-            <path 
-              d="M14 0C14 0 28 10 28 20.5C28 26.5 23 31.5 17 33.5C14.5 34.3 14 31 14 31C14 31 13.5 34.3 11 33.5C5 31.5 0 26.5 0 20.5C0 10 14 0 14 0Z" 
-              fill="url(#leaf-grad)" 
-            />
-            <path 
-              d="M14 0V31C14 31 13.5 34.3 11 33.5C5 31.5 0 26.5 0 20.5C0 10 14 0 14 0Z" 
-              fill="url(#leaf-dark-grad)" 
-              opacity="0.15"
-            />
-            <defs>
-              <linearGradient id="leaf-grad" x1="0" y1="0" x2="28" y2="34" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#8be28f" />
-                <stop offset="50%" stopColor="#4bb551" />
-                <stop offset="100%" stopColor="#2c7c31" />
-              </linearGradient>
-              <linearGradient id="leaf-dark-grad" x1="0" y1="0" x2="14" y2="34" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#000000" />
-                <stop offset="100%" stopColor="#000000" stopOpacity="0.6" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <span className="font-bold text-xl tracking-tight text-[#111827]">
-            Insparity<span className="text-[#3e9447]">AI</span>
-          </span>
+          <img src="/Insparity AI logo.png" alt="Insparity AI" className="h-10 w-auto object-contain" />
         </div>
 
         {/* Center Menu Links */}
@@ -302,10 +284,70 @@ export default function Navbar({ setCurrentPage }) {
         </div>
 
         {/* Right CTA Button */}
-        <div>
-          <button className="bg-[#439c47] hover:bg-[#38843c] active:bg-[#2e6d31] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors cursor-pointer border-none">
-            Sign Up
+        <div className="flex items-center gap-3 relative">
+          
+          {/* Circular dial icon button for Calm Sounds */}
+          <button 
+            onClick={() => setShowSoundsOverlay(!showSoundsOverlay)}
+            className={`w-9.5 h-9.5 rounded-full border flex items-center justify-center transition cursor-pointer focus:outline-none ${
+              isAmbientPlaying && activeAmbientSound
+                ? 'border-[#439c47] bg-green-50 text-[#439c47] shadow-sm animate-pulse' 
+                : 'border-gray-200 text-gray-400 hover:border-gray-300 hover:text-gray-600 bg-transparent'
+            }`}
+            title="Calm Ambient Sounds"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
           </button>
+
+          {/* Calm Sounds dropdown card */}
+          {showSoundsOverlay && (
+            <div className="absolute right-0 top-12 z-50 animate-fade-in shadow-2xl">
+              <CalmSoundsCard 
+                activeAmbientSound={activeAmbientSound}
+                setActiveAmbientSound={setActiveAmbientSound}
+                isAmbientPlaying={isAmbientPlaying}
+                setIsAmbientPlaying={setIsAmbientPlaying}
+                ambientVolume={ambientVolume}
+                setAmbientVolume={setAmbientVolume}
+              />
+            </div>
+          )}
+
+          {isLoggedIn ? (
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 select-none">
+                <div className="w-9 h-9 rounded-full bg-[#439c47] text-white flex items-center justify-center font-semibold text-sm shadow-sm shadow-green-100/10">
+                  {userEmail ? userEmail.substring(0, 2).toUpperCase() : 'U'}
+                </div>
+                <span className="hidden sm:inline-block text-xs font-semibold text-gray-700">
+                  {userEmail}
+                </span>
+              </div>
+              <button 
+                onClick={handleLogout}
+                className="text-xs text-gray-500 hover:text-red-500 font-semibold bg-transparent border-none cursor-pointer p-0 transition"
+              >
+                Sign Out
+              </button>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2.5">
+              <button 
+                onClick={() => setCurrentPage('login')}
+                className="text-gray-600 hover:text-[#3e9447] text-sm font-semibold px-4 py-2.5 rounded-full transition bg-transparent border-none cursor-pointer"
+              >
+                Sign In
+              </button>
+              <button 
+                onClick={() => setCurrentPage('signup')}
+                className="bg-[#439c47] hover:bg-[#38843c] active:bg-[#2e6d31] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors cursor-pointer border-none"
+              >
+                Sign Up
+              </button>
+            </div>
+          )}
         </div>
 
       </div>
