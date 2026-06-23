@@ -5,7 +5,7 @@ export default function LifeTransitionCoaching() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -33,7 +33,7 @@ export default function LifeTransitionCoaching() {
       </section>
 
       {/* SECTION 2: THE NEXT CHAPTER */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="bg-[#fcfdfc] border border-gray-100/80 rounded-[32px] p-8 md:p-12 text-center max-w-5xl mx-auto shadow-2xs">
           <span className="text-[#3e9447] text-[10px] font-bold uppercase tracking-wider block mb-3">THE NEXT CHAPTER</span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-6">
@@ -46,7 +46,7 @@ export default function LifeTransitionCoaching() {
       </section>
 
       {/* SECTION 3: PRODUCTIVITY INSIGHTS ON THE GO */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-2 tracking-tight">Productivity Insights On The Go</h2>
         <p className="text-gray-500 text-sm mb-10 max-w-xl leading-relaxed">
           Listen to expert-guided audio sessions designed to help you improve focus, build habits, manage distractions, and create sustainable productivity systems.
@@ -90,7 +90,7 @@ export default function LifeTransitionCoaching() {
       </section>
 
       {/* SECTION 4: YOU DON'T NEED TO HAVE ALL THE ANSWERS TODAY */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left Text */}
@@ -134,7 +134,7 @@ export default function LifeTransitionCoaching() {
       </section>
 
       {/* SECTION 5: REFLECTION PROMPTS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50 text-center">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50 text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-12 tracking-tight">Reflection Prompts</h2>
         
         {/* 3 Prompts Grid */}

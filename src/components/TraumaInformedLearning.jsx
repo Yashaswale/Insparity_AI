@@ -8,7 +8,7 @@ export default function TraumaInformedLearning() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -36,7 +36,7 @@ export default function TraumaInformedLearning() {
       </section>
 
       {/* SECTION 2: WHAT THESE COURSES HELP WITH */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50 text-center">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50 text-center">
         <span className="text-gray-400 text-[10px] font-bold uppercase tracking-wider block mb-6">WHAT THESE COURSES HELP WITH</span>
         
         {/* Pills Grid */}
@@ -53,7 +53,7 @@ export default function TraumaInformedLearning() {
       </section>
 
       {/* SECTION 3: OUTCOME/BENEFIT CARDS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
           
           {/* Card 1: Guided Emotional Awareness (lg:col-span-4) */}
@@ -126,7 +126,7 @@ export default function TraumaInformedLearning() {
       </section>
 
       {/* SECTION 4: LEARN, HEAL & REFLECT AT YOUR OWN PACE */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="flex items-end justify-between mb-10">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2 tracking-tight">Learn, Heal & Reflect at Your Own Pace</h2>
@@ -256,7 +256,7 @@ export default function TraumaInformedLearning() {
       </section>
 
       {/* SECTION 5: WELLNESS SUPPORT TOOLS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50 text-center">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50 text-center">
         <div className="max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 tracking-tight">Wellness Support Tools</h2>
           <p className="text-gray-550 text-sm leading-relaxed max-w-xl mx-auto">Resource maps and tips to assist your coping process.</p>

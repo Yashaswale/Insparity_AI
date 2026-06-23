@@ -6,7 +6,7 @@ export default function AudioTextJournal() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -34,7 +34,7 @@ export default function AudioTextJournal() {
       </section>
 
       {/* SECTION 2: A PRIVATE SPACE FOR EMOTIONAL REFLECTION */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-gray-900 tracking-tight mb-4">
             A Private Space for Emotional Reflection
@@ -88,7 +88,7 @@ export default function AudioTextJournal() {
       </section>
 
       {/* SECTION 3: 5 CARDS FEATURE GRID */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10 md:py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-stretch">
           
           {/* Card 1: Write Without Judgment (lg:col-span-4) */}
@@ -183,7 +183,7 @@ export default function AudioTextJournal() {
       </section>
 
       {/* SECTION 4: THE JOURNEY OF UNDERSTANDING */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center tracking-tight">The Journey of Understanding</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -219,7 +219,7 @@ export default function AudioTextJournal() {
       </section>
 
       {/* SECTION 5: REAL-TIME INSIGHT, GENTLE GUIDANCE */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left Text */}

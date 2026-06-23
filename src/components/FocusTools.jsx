@@ -6,7 +6,7 @@ export default function FocusTools() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO & FOCUS TARGET */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -33,7 +33,7 @@ export default function FocusTools() {
 
 
       {/* SECTION 2: MOTIVATION ISN'T THE PROBLEM */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left Content */}
@@ -81,7 +81,7 @@ export default function FocusTools() {
 
 
       {/* SECTION 3: PRODUCTIVITY INSIGHTS ON THE GO */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <h2 className="text-3xl font-bold text-gray-900 mb-2 tracking-tight">
           Productivity Insights On The Go
         </h2>
@@ -133,7 +133,7 @@ export default function FocusTools() {
 
 
       {/* SECTION 4: SMALL HABITS CREATE BIG RESULTS */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left Flow */}
@@ -171,7 +171,7 @@ export default function FocusTools() {
 
 
       {/* SECTION 5: BUILD YOUR PERSONAL PRODUCTIVITY TOOLKIT */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24 border-t border-gray-55">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24 border-t border-gray-55">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left Text */}

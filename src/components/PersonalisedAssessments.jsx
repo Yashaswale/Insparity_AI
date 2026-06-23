@@ -5,7 +5,7 @@ export default function PersonalisedAssessments() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HEADER & TIMELINE */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -73,7 +73,7 @@ export default function PersonalisedAssessments() {
 
 
       {/* SECTION 2: ROADMAP (LEFT) & LEARNING STAGE (RIGHT) */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Your Roadmap (Left - lg:col-span-7) */}
@@ -204,7 +204,7 @@ export default function PersonalisedAssessments() {
 
 
       {/* SECTION 3: ROADMAP FLOW ICONS ROW */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           
           {/* Card 1 */}
@@ -252,7 +252,7 @@ export default function PersonalisedAssessments() {
 
 
       {/* SECTION 4: DIVERSE ASSESSMENT FORMATS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-10 tracking-tight">
           Diverse Assessment Formats
         </h2>

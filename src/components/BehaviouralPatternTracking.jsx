@@ -5,7 +5,7 @@ export default function BehaviouralPatternTracking() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO SECTION */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10 md:py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -33,7 +33,7 @@ export default function BehaviouralPatternTracking() {
       </section>
 
       {/* SECTION 2: ECOSYSTEM OBSERVATION AREAS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center tracking-tight">Ecosystem Observation Areas</h2>
         
         {/* Top 3 Columns Row */}
@@ -99,7 +99,7 @@ export default function BehaviouralPatternTracking() {
       </section>
 
       {/* SECTION 3: AI PATTERN DISCOVERY */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <h2 className="text-3xl font-bold text-gray-900 mb-10 tracking-tight">AI Pattern Discovery</h2>
         
         {/* 3 Green Large Cards Grid */}
@@ -133,7 +133,7 @@ export default function BehaviouralPatternTracking() {
       </section>
 
       {/* SECTION 4: PATTERNS WORTH NOTICING */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <h2 className="text-3xl font-bold text-gray-900 mb-10 tracking-tight">Patterns Worth Noticing</h2>
         
         {/* 2 Bordered Row Cards */}

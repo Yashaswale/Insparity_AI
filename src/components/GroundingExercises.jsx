@@ -6,7 +6,7 @@ export default function GroundingExercises() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO & METRICS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -55,7 +55,7 @@ export default function GroundingExercises() {
       </section>
 
       {/* SECTION 2: YOUR JOURNEY TO REGULATION */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50 text-center">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50 text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-10 tracking-tight">Your Journey to Regulation</h2>
         
         {/* Step Flow Card */}
@@ -90,7 +90,7 @@ export default function GroundingExercises() {
       </section>
 
       {/* SECTION 3: TOOLS DESIGNED TO HELP YOU FEEL PRESENT & SAFE */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Content */}
           <div className="lg:col-span-7">
@@ -133,7 +133,7 @@ export default function GroundingExercises() {
       </section>
 
       {/* SECTION 4: AI SUGGESTION & NERVOUS SYSTEM REGULATION */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* AI Suggestion Left Card (lg:col-span-5) */}

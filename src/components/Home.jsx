@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import sunsetFamily from '../assets/sunset_family.png'
 import zenStones from '../assets/zen_stones.png'
 
 // New imports
@@ -52,10 +51,10 @@ export default function Home({
     <div className="bg-white text-gray-900 font-sans selection:bg-green-100 selection:text-green-800">
 
       {/* SECTION 1: HERO SECTION */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-6 relative">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6 relative">
         <div
           className="relative rounded-[32px] overflow-hidden flex items-center bg-cover bg-center min-h-[580px] lg:min-h-[660px] pb-28 lg:pb-32"
-          style={{ backgroundImage: `url(${sunsetFamily})` }}
+          style={{ backgroundImage: "url('/Hero_img.png')" }}
         >
           {/* Soft overlay to ensure readability */}
           <div className="absolute inset-0 bg-black/30"></div>
@@ -98,12 +97,12 @@ export default function Home({
       </section>
 
       {/* Overlapping Category Boxes */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 -mt-24 pb-8 relative z-20 select-none">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 -mt-24 pb-8 relative z-20 select-none">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {/* Box 1: Personal Development */}
           <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
             <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="text-xs">🧭</span>
+              <span className="material-icons text-sm select-none">explore</span>
               <h4 className="font-bold text-xs uppercase tracking-wider">Personal Development</h4>
             </div>
             <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
@@ -116,7 +115,7 @@ export default function Home({
           {/* Box 2: ADHD */}
           <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
             <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="text-xs">⚡</span>
+              <span className="material-icons text-sm select-none">flash_on</span>
               <h4 className="font-bold text-xs uppercase tracking-wider">ADHD</h4>
             </div>
             <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
@@ -128,7 +127,7 @@ export default function Home({
           {/* Box 3: Mental Wellness */}
           <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
             <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="text-xs">🌱</span>
+              <span className="material-icons text-sm select-none">spa</span>
               <h4 className="font-bold text-xs uppercase tracking-wider">Mental Wellness</h4>
             </div>
             <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
@@ -140,7 +139,7 @@ export default function Home({
           {/* Box 4: Trauma */}
           <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
             <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="text-xs">🛡️</span>
+              <span className="material-icons text-sm select-none">shield</span>
               <h4 className="font-bold text-xs uppercase tracking-wider">Trauma</h4>
             </div>
             <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
@@ -154,7 +153,7 @@ export default function Home({
           {/* Box 5: Retirement & Life plan */}
           <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
             <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="text-xs">👵</span>
+              <span className="material-icons text-sm select-none">elderly</span>
               <h4 className="font-bold text-xs uppercase tracking-wider">Retirement & Life plan</h4>
             </div>
             <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
@@ -170,7 +169,7 @@ export default function Home({
 
 
       {/* SECTION 2: CHOOSE THE COACH THAT UNDERSTANDS YOUR NEEDS */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-4">
             Choose The Coach That Understands Your Needs
@@ -180,220 +179,140 @@ export default function Home({
           </p>
         </div>
 
-        {/* 5-Column Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        {/* 5-Column Grid with Responsive Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
 
-          {/* Card 1: Al Nadeem */}
-          <div className="bg-white border border-gray-100 rounded-[24px] p-6 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
-            <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5 bg-green-50">
-                <svg className="w-7 h-7 text-[#439c47]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                </svg>
+          {/* Card 1: AI Nadeem */}
+          <div className="bg-white border border-gray-100 rounded-[28px] p-5 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
+            <div className="w-full flex flex-col items-center">
+              <div className="w-full h-40 rounded-2xl overflow-hidden mb-5">
+                <img src="/Agents/Agent1.png" className="w-full h-full object-cover" alt="AI Nadeem" />
               </div>
-              <h3 className="font-bold text-[#111827] text-lg mb-1">Al Nadeem</h3>
-              <p className="text-gray-400 text-xs mb-4">Trauma & Wellness Coach</p>
+              <h3 className="font-bold text-[#111827] text-lg mb-1">AI Nadeem</h3>
+              <p className="text-gray-400 text-xs mb-4">Personal Development Coach</p>
 
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
                 Adults processing trauma, anxiety, grief
               </div>
 
-              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-1">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Guided somatic check-ins</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Audio/text journal reflection</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Crisis-aware conversation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Grounding exercise delivery</span>
-                </li>
+              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-5 list-disc leading-relaxed">
+                <li>Goal setting and progress tracking</li>
+                <li>Habit building and accountability</li>
+                <li>Mindset and confidence coaching</li>
+                <li>Daily reflection and growth plans</li>
               </ul>
             </div>
 
-            <button className="w-full flex items-center justify-center gap-2 bg-[#439c47] hover:bg-[#38843c] text-white text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
+            <button className="w-full flex items-center justify-center gap-2 bg-[#3e9447] hover:bg-[#2c6e33] text-white text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none shadow-sm">
+              <span className="material-icons text-sm select-none">chat</span>
               Chat Now
             </button>
           </div>
 
-          {/* Card 2: Al Kabeer */}
-          <div className="bg-white border border-gray-100 rounded-[24px] p-6 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
-            <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5 bg-green-50">
-                <svg className="w-7 h-7 text-[#439c47]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+          {/* Card 2: AI Kabeer */}
+          <div className="bg-white border border-gray-100 rounded-[28px] p-5 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
+            <div className="w-full flex flex-col items-center">
+              <div className="w-full h-40 rounded-2xl overflow-hidden mb-5">
+                <img src="/Agents/Agent2.png" className="w-full h-full object-cover" alt="AI Kabeer" />
               </div>
-              <h3 className="font-bold text-[#111827] text-lg mb-1">Al Kabeer</h3>
-              <p className="text-gray-400 text-xs mb-4">ADHD & Focus Coach</p>
+              <h3 className="font-bold text-[#111827] text-lg mb-1">AI Kabeer</h3>
+              <p className="text-gray-400 text-xs mb-4">Trauma, ADHD & Focus Coach</p>
 
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
                 Adults & teens with ADHD or executive function needs
               </div>
 
-              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-1">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Guided somatic check-ins</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Audio/text journal reflection</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Crisis-aware conversation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Grounding exercise delivery</span>
-                </li>
+              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-5 list-disc leading-relaxed">
+                <li>ADHD focus productivity coaching</li>
+                <li>Audio/text journal reflections</li>
+                <li>Grounding and coping exercises</li>
+                <li>Task planning and habit support</li>
               </ul>
             </div>
 
-            <button className="w-full flex items-center justify-center gap-2 bg-[#f0fdf4] hover:bg-[#e2fbe7] text-[#2f7a37] text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
+            <button className="w-full flex items-center justify-center gap-2 bg-[#f0fdf4] hover:bg-[#e2fbe7] text-[#2f7a37] text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none shadow-xs">
+              <span className="material-icons text-sm select-none">chat</span>
               Chat Now
             </button>
           </div>
 
-          {/* Card 3: The Captin */}
-          <div className="bg-white border border-gray-100 rounded-[24px] p-6 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
-            <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5 bg-green-50">
-                <svg className="w-7 h-7 text-[#439c47]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
+          {/* Card 3: AI hakeem */}
+          <div className="bg-white border border-gray-100 rounded-[28px] p-5 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
+            <div className="w-full flex flex-col items-center">
+              <div className="w-full h-40 rounded-2xl overflow-hidden mb-5">
+                <img src="/Agents/Agent3.png" className="w-full h-full object-cover" alt="AI hakeem" />
               </div>
-              <h3 className="font-bold text-[#111827] text-lg mb-1">The Captin</h3>
-              <p className="text-gray-400 text-xs mb-4">Retirement & Life Planning AI</p>
+              <h3 className="font-bold text-[#111827] text-lg mb-1">AI hakeem</h3>
+              <p className="text-gray-400 text-xs mb-4">Retirement & Wellness AI</p>
 
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
-                Adults 50+ planning retirement, life transitions
+                For adults 50+ and retirees seeking financial confidence, wellbeing, and life guidance.
               </div>
 
-              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-1">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Guided somatic check-ins</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Audio/text journal reflection</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Crisis-aware conversation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Grounding exercise delivery</span>
-                </li>
+              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-5 list-disc leading-relaxed">
+                <li>Retirement & pension planning</li>
+                <li>Financial guidance</li>
+                <li>Daily wellbeing support</li>
+                <li>Legacy planning</li>
               </ul>
             </div>
 
-            <button className="w-full flex items-center justify-center gap-2 bg-[#f0fdf4] hover:bg-[#e2fbe7] text-[#2f7a37] text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
+            <button className="w-full flex items-center justify-center gap-2 bg-[#f0fdf4] hover:bg-[#e2fbe7] text-[#2f7a37] text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none shadow-xs">
+              <span className="material-icons text-sm select-none">chat</span>
               Chat Now
             </button>
           </div>
 
-          {/* Card 4: Buahmad */}
-          <div className="bg-white border border-gray-100 rounded-[24px] p-6 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
-            <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5 bg-green-50">
-                <svg className="w-7 h-7 text-[#439c47]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+          {/* Card 4: Bu Ahmad */}
+          <div className="bg-white border border-gray-100 rounded-[28px] p-5 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
+            <div className="w-full flex flex-col items-center">
+              <div className="w-full h-40 rounded-2xl overflow-hidden mb-5">
+                <img src="/Agents/Agent4.png" className="w-full h-full object-cover" alt="Bu Ahmad" />
               </div>
-              <h3 className="font-bold text-[#111827] text-lg mb-1">Buahmad</h3>
+              <h3 className="font-bold text-[#111827] text-lg mb-1">Bu Ahmad</h3>
               <p className="text-gray-400 text-xs mb-4">Children's Emotional AI</p>
 
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
                 Children 6–16 and their parents
               </div>
 
-              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-1">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Guided somatic check-ins</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Audio/text journal reflection</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Crisis-aware conversation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Grounding exercise delivery</span>
-                </li>
+              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-5 list-disc leading-relaxed">
+                <li>Age-adapted emotional check-ins</li>
+                <li>Trauma-safe storytelling</li>
+                <li>ADHD-friendly focus games</li>
+                <li>Parent-facing insight reports</li>
               </ul>
             </div>
 
-            <button className="w-full flex items-center justify-center gap-2 bg-[#f0fdf4] hover:bg-[#e2fbe7] text-[#2f7a37] text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
+            <button className="w-full flex items-center justify-center gap-2 bg-[#f0fdf4] hover:bg-[#e2fbe7] text-[#2f7a37] text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none shadow-xs">
+              <span className="material-icons text-sm select-none">chat</span>
               Chat Now
             </button>
           </div>
 
-          {/* Card 5: Al hakeem */}
-          <div className="bg-white border border-gray-100 rounded-[24px] p-6 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
-            <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full flex items-center justify-center mb-5 bg-green-50">
-                <svg className="w-7 h-7 text-[#439c47]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                </svg>
+          {/* Card 5: The Captain */}
+          <div className="bg-white border border-gray-100 rounded-[28px] p-5 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
+            <div className="w-full flex flex-col items-center">
+              <div className="w-full h-40 rounded-2xl overflow-hidden mb-5">
+                <img src="/Agents/Agent5.png" className="w-full h-full object-cover" alt="The Captain" />
               </div>
-              <h3 className="font-bold text-[#111827] text-lg mb-1">Al hakeem</h3>
-              <p className="text-gray-400 text-xs mb-4">Senior Wellness AI</p>
+              <h3 className="font-bold text-[#111827] text-lg mb-1">The Captain</h3>
+              <p className="text-gray-400 text-xs mb-4">Leadership & Performance AI</p>
 
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
-                Retirees 65+ for wellbeing, memory, and social connection
+                For professionals leading teams, projects, and business growth.
               </div>
 
-              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-1">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Guided somatic check-ins</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Audio/text journal reflection</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Crisis-aware conversation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-0.5">•</span>
-                  <span>Grounding exercise delivery</span>
-                </li>
+              <ul className="text-left text-xs text-gray-600 space-y-3 mb-8 w-full pl-5 list-disc leading-relaxed">
+                <li>Leadership coaching</li>
+                <li>Team management support</li>
+                <li>Decision-making guidance</li>
+                <li>Conflict resolution strategies</li>
               </ul>
             </div>
 
-            <button className="w-full flex items-center justify-center gap-2 bg-[#f0fdf4] hover:bg-[#e2fbe7] text-[#2f7a37] text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none">
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
+            <button className="w-full flex items-center justify-center gap-2 bg-[#f0fdf4] hover:bg-[#e2fbe7] text-[#2f7a37] text-xs font-semibold py-3 px-4 rounded-full transition duration-200 cursor-pointer border-none shadow-xs">
+              <span className="material-icons text-sm select-none">chat</span>
               Chat Now
             </button>
           </div>
@@ -404,7 +323,7 @@ export default function Home({
 
       {/* SECTION 3: COMPREHENSIVE SUPPORT FOR EVERY STAGE OF LIFE */}
       <section className="bg-gray-50/50 py-20 md:py-24 border-t border-gray-100">
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-12">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
 
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-4">
@@ -545,27 +464,25 @@ export default function Home({
 
 
       {/* SECTION 4: WE HANDEL YOU AND GUIDE YOU IN YOUR JOURNEY */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-20 md:py-24">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-20 md:py-24">
 
         <div className="text-center max-w-3xl mx-auto mb-16">
           {/* Typo preserved exactly as requested in the screenshot: "We Handel You..." */}
           <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-4">
-            We Handel You And Guide You In Your Journey
+            We Handle You And Guide You In Your Journey
           </h2>
           <p className="text-gray-500 text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
             Build confidence for tomorrow with guidance designed to help you prepare for retirement, financial security, personal wellbeing, and life's next chapter.
           </p>
         </div>
 
-        {/* 5-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
+        {/* 5-Column Grid with Responsive Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
           {/* Card 1: Financial Security */}
           <div className="bg-gray-50/50 border border-gray-100/50 rounded-[20px] p-6 flex flex-col hover:shadow-md transition duration-300">
             <div className="w-11 h-11 rounded-lg bg-[#439c47] flex items-center justify-center text-white mb-6">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+              <span className="material-icons text-xl select-none">verified_user</span>
             </div>
 
             <h3 className="font-bold text-gray-900 text-base mb-4">Financial Security</h3>
@@ -581,10 +498,7 @@ export default function Home({
           {/* Card 2: Future Goals */}
           <div className="bg-gray-50/50 border border-gray-100/50 rounded-[20px] p-6 flex flex-col hover:shadow-md transition duration-300">
             <div className="w-11 h-11 rounded-lg bg-[#439c47] flex items-center justify-center text-white mb-6">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
+              <span className="material-icons text-xl select-none">ads_click</span>
             </div>
 
             <h3 className="font-bold text-gray-900 text-base mb-4">Future Goals</h3>
@@ -600,9 +514,7 @@ export default function Home({
           {/* Card 3: Life Transitions (HIGHLIGHTED CARD) */}
           <div className="bg-[#439c47] text-white rounded-[20px] p-6 flex flex-col shadow-lg shadow-green-100 hover:shadow-xl transition duration-300">
             <div className="w-11 h-11 rounded-lg bg-white flex items-center justify-center text-[#439c47] mb-6">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
+              <span className="material-icons text-xl select-none">menu_book</span>
             </div>
 
             <h3 className="font-bold text-white text-base mb-4">Life Transitions</h3>
@@ -618,9 +530,7 @@ export default function Home({
           {/* Card 4: Wellbeing & Lifestyle */}
           <div className="bg-gray-50/50 border border-gray-100/50 rounded-[20px] p-6 flex flex-col hover:shadow-md transition duration-300">
             <div className="w-11 h-11 rounded-lg bg-[#439c47] flex items-center justify-center text-white mb-6">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
+              <span className="material-icons text-xl select-none">healing</span>
             </div>
 
             <h3 className="font-bold text-gray-900 text-base mb-4">Wellbeing & Lifestyle</h3>
@@ -636,9 +546,7 @@ export default function Home({
           {/* Card 5: Legacy & Impact */}
           <div className="bg-gray-50/50 border border-gray-100/50 rounded-[20px] p-6 flex flex-col hover:shadow-md transition duration-300">
             <div className="w-11 h-11 rounded-lg bg-[#439c47] flex items-center justify-center text-white mb-6">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
+              <span className="material-icons text-xl select-none">domain</span>
             </div>
 
             <h3 className="font-bold text-gray-900 text-base mb-4">Legacy & Impact</h3>
@@ -656,7 +564,7 @@ export default function Home({
 
 
       {/* SECTION 5: YOUR AI COACH ALWAYS AVAILABLE FOR YOU (New Section 1) */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-20">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-20">
         <div className="bg-[#f4fdf5]/35 border border-green-100/30 rounded-[32px] overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch">
 
           {/* Left Side Content */}
@@ -673,11 +581,11 @@ export default function Home({
 
             <div className="space-y-4 mb-10">
               <div className="flex items-center gap-3 text-sm text-gray-800">
-                <span className="w-5 h-5 rounded-full bg-green-100 text-[#3e9447] flex items-center justify-center font-bold text-xs flex-shrink-0">✓</span>
+                <span className="material-icons text-xs text-[#3e9447] bg-green-100 rounded-full w-5 h-5 flex items-center justify-center select-none font-bold flex-shrink-0">check</span>
                 <span className="font-medium">Deep contextual memory for long-term growth</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-800">
-                <span className="w-5 h-5 rounded-full bg-green-100 text-[#3e9447] flex items-center justify-center font-bold text-xs flex-shrink-0">✓</span>
+                <span className="material-icons text-xs text-[#3e9447] bg-green-100 rounded-full w-5 h-5 flex items-center justify-center select-none font-bold flex-shrink-0">check</span>
                 <span className="font-medium">Zero judgment, high empathy communication</span>
               </div>
             </div>
@@ -696,9 +604,7 @@ export default function Home({
               {/* Chat Header */}
               <div className="bg-white px-5 py-4 border-b border-gray-100 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-[#439c47] flex items-center justify-center text-white text-sm font-bold shadow-xs">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+                  <span className="material-icons text-[20px] text-white select-none">support_agent</span>
                 </div>
                 <div>
                   <h4 className="font-bold text-[#111827] text-sm leading-tight">Insparity AI</h4>
@@ -738,9 +644,7 @@ export default function Home({
                   type="submit"
                   className="w-9 h-9 rounded-full bg-[#439c47] hover:bg-[#38843c] flex items-center justify-center text-white border-none cursor-pointer flex-shrink-0"
                 >
-                  <svg className="w-4 h-4 transform rotate-90" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
-                  </svg>
+                  <span className="material-icons text-sm select-none text-white leading-none">send</span>
                 </button>
               </form>
 
@@ -752,7 +656,7 @@ export default function Home({
 
 
       {/* SECTION 6: REFLECTIVE JOURNAL / WELLNESS AUDIO / GROWTH PULSE (New Section 2) */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 
           {/* Card 1: Reflective Journal (lg:col-span-6) */}
@@ -839,25 +743,21 @@ export default function Home({
 
               {/* Controls */}
               <div className="flex items-center gap-6 text-[#111827]">
-                <button className="bg-transparent border-none cursor-pointer hover:text-[#439c47] p-1">
-                  <span className="text-lg font-bold">⟲</span>
+                <button className="bg-transparent border-none cursor-pointer hover:text-[#439c47] p-1 flex items-center justify-center">
+                  <span className="material-icons text-lg leading-none select-none">replay_10</span>
                 </button>
                 <button
                   onClick={() => setIsAudioPlaying(!isAudioPlaying)}
                   className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-50 p-0"
                 >
                   {isAudioPlaying ? (
-                    <svg className="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                    </svg>
+                    <span className="material-icons text-gray-900 select-none">pause</span>
                   ) : (
-                    <svg className="w-5 h-5 text-gray-900 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
+                    <span className="material-icons text-gray-900 select-none">play_arrow</span>
                   )}
                 </button>
-                <button className="bg-transparent border-none cursor-pointer hover:text-[#439c47] p-1">
-                  <span className="text-lg font-bold">⟳</span>
+                <button className="bg-transparent border-none cursor-pointer hover:text-[#439c47] p-1 flex items-center justify-center">
+                  <span className="material-icons text-lg leading-none select-none">forward_10</span>
                 </button>
               </div>
             </div>
@@ -925,8 +825,8 @@ export default function Home({
             <div className="mt-8">
               <div className="border-t border-gray-100 pt-6 flex items-center justify-between">
                 <div className="flex gap-2">
-                  <span className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center text-xs text-[#439c47] font-bold">📈</span>
-                  <span className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center text-xs text-[#439c47] font-bold">🌐</span>
+                  <span className="material-icons text-sm text-[#439c47] select-none">trending_up</span>
+                  <span className="material-icons text-sm text-[#439c47] select-none">public</span>
                 </div>
                 <a href="#" className="text-[#111827] text-[11px] font-bold uppercase tracking-wider hover:text-[#3e9447] transition">
                   View Analytic
@@ -940,7 +840,7 @@ export default function Home({
 
 
       {/* SECTION 7: FIND THE RIGHT PATH FOR THIS MOMENT (New Section 3) */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-20">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-20">
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
@@ -958,8 +858,8 @@ export default function Home({
           </div>
         </div>
 
-        {/* 4 Course Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 4 Course Cards Grid with Responsive Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
           {/* Course Card 1 */}
           <div className="bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-md transition duration-300 flex flex-col justify-between">
@@ -974,8 +874,8 @@ export default function Home({
                     <img src={marcusProfile} alt="Marcus Throne" className="w-6 h-6 rounded-full object-cover border border-gray-100" />
                     <span className="text-gray-800 text-xs font-semibold">Marcus Throne</span>
                   </div>
-                  <div className="flex items-center gap-1 text-amber-500 text-xs font-semibold">
-                    <span>★</span>
+                  <div className="flex items-center gap-1 text-xs font-semibold">
+                    <span className="material-icons text-amber-500 text-sm select-none">star</span>
                     <span className="text-gray-700">4.2</span>
                     <span className="text-gray-400 font-normal">(236)</span>
                   </div>
@@ -989,17 +889,20 @@ export default function Home({
                 </p>
 
                 {/* Course Stats / Details */}
-                <div className="space-y-2.5 text-[11px] font-semibold border-t border-gray-50 pt-5">
+                <div className="space-y-3 text-[11px] font-semibold border-t border-gray-50 pt-5">
                   <div className="flex justify-between items-center text-gray-500">
-                    <span className="flex items-center gap-1.5">🕒 6h 30m</span>
-                    <span className="line-through text-gray-400 font-normal">AED 1299.00</span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="material-icons text-sm text-gray-400 select-none">schedule</span>
+                      6h 30m
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="material-icons text-sm text-gray-400 select-none">menu_book</span>
+                      24 Lessons
+                    </span>
                   </div>
-                  <div className="flex justify-between items-center text-gray-500">
-                    <span className="flex items-center gap-1.5">📓 24 Lessons</span>
-                    <span className="text-gray-950 font-bold text-sm">AED 399.00</span>
-                  </div>
-                  <div className="text-gray-500">
-                    <span>👥 1.2k Enrolled</span>
+                  <div className="flex items-center gap-1.5 text-gray-500">
+                    <span className="material-icons text-sm text-gray-400 select-none">group</span>
+                    1.2k Enrolled
                   </div>
                 </div>
               </div>
@@ -1028,8 +931,8 @@ export default function Home({
                     <img src={marcusProfile} alt="Marcus Throne" className="w-6 h-6 rounded-full object-cover border border-gray-100" />
                     <span className="text-gray-800 text-xs font-semibold">Marcus Throne</span>
                   </div>
-                  <div className="flex items-center gap-1 text-amber-500 text-xs font-semibold">
-                    <span>★</span>
+                  <div className="flex items-center gap-1 text-xs font-semibold">
+                    <span className="material-icons text-amber-500 text-sm select-none">star</span>
                     <span className="text-gray-700">4.2</span>
                     <span className="text-gray-400 font-normal">(236)</span>
                   </div>
@@ -1043,17 +946,20 @@ export default function Home({
                 </p>
 
                 {/* Course Stats / Details */}
-                <div className="space-y-2.5 text-[11px] font-semibold border-t border-gray-50 pt-5">
+                <div className="space-y-3 text-[11px] font-semibold border-t border-gray-50 pt-5">
                   <div className="flex justify-between items-center text-gray-500">
-                    <span className="flex items-center gap-1.5">🕒 6h 30m</span>
-                    <span className="line-through text-gray-400 font-normal">AED 1299.00</span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="material-icons text-sm text-gray-400 select-none">schedule</span>
+                      6h 30m
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="material-icons text-sm text-gray-400 select-none">menu_book</span>
+                      24 Lessons
+                    </span>
                   </div>
-                  <div className="flex justify-between items-center text-gray-500">
-                    <span className="flex items-center gap-1.5">📓 24 Lessons</span>
-                    <span className="text-gray-950 font-bold text-sm">AED 399.00</span>
-                  </div>
-                  <div className="text-gray-500">
-                    <span>👥 1.2k Enrolled</span>
+                  <div className="flex items-center gap-1.5 text-gray-500">
+                    <span className="material-icons text-sm text-gray-400 select-none">group</span>
+                    1.2k Enrolled
                   </div>
                 </div>
               </div>
@@ -1082,8 +988,8 @@ export default function Home({
                     <img src={marcusProfile} alt="Marcus Throne" className="w-6 h-6 rounded-full object-cover border border-gray-100" />
                     <span className="text-gray-800 text-xs font-semibold">Marcus Throne</span>
                   </div>
-                  <div className="flex items-center gap-1 text-amber-500 text-xs font-semibold">
-                    <span>★</span>
+                  <div className="flex items-center gap-1 text-xs font-semibold">
+                    <span className="material-icons text-amber-500 text-sm select-none">star</span>
                     <span className="text-gray-700">4.2</span>
                     <span className="text-gray-400 font-normal">(236)</span>
                   </div>
@@ -1097,17 +1003,20 @@ export default function Home({
                 </p>
 
                 {/* Course Stats / Details */}
-                <div className="space-y-2.5 text-[11px] font-semibold border-t border-gray-50 pt-5">
+                <div className="space-y-3 text-[11px] font-semibold border-t border-gray-50 pt-5">
                   <div className="flex justify-between items-center text-gray-500">
-                    <span className="flex items-center gap-1.5">🕒 6h 30m</span>
-                    <span className="line-through text-gray-400 font-normal">AED 1299.00</span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="material-icons text-sm text-gray-400 select-none">schedule</span>
+                      6h 30m
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="material-icons text-sm text-gray-400 select-none">menu_book</span>
+                      24 Lessons
+                    </span>
                   </div>
-                  <div className="flex justify-between items-center text-gray-500">
-                    <span className="flex items-center gap-1.5">📓 24 Lessons</span>
-                    <span className="text-gray-950 font-bold text-sm">AED 399.00</span>
-                  </div>
-                  <div className="text-gray-500">
-                    <span>👥 1.2k Enrolled</span>
+                  <div className="flex items-center gap-1.5 text-gray-500">
+                    <span className="material-icons text-sm text-gray-400 select-none">group</span>
+                    1.2k Enrolled
                   </div>
                 </div>
               </div>
@@ -1136,8 +1045,8 @@ export default function Home({
                     <img src={marcusProfile} alt="Marcus Throne" className="w-6 h-6 rounded-full object-cover border border-gray-100" />
                     <span className="text-gray-800 text-xs font-semibold">Marcus Throne</span>
                   </div>
-                  <div className="flex items-center gap-1 text-amber-500 text-xs font-semibold">
-                    <span>★</span>
+                  <div className="flex items-center gap-1 text-xs font-semibold">
+                    <span className="material-icons text-amber-500 text-sm select-none">star</span>
                     <span className="text-gray-700">4.2</span>
                     <span className="text-gray-400 font-normal">(236)</span>
                   </div>
@@ -1151,17 +1060,20 @@ export default function Home({
                 </p>
 
                 {/* Course Stats / Details */}
-                <div className="space-y-2.5 text-[11px] font-semibold border-t border-gray-50 pt-5">
+                <div className="space-y-3 text-[11px] font-semibold border-t border-gray-50 pt-5">
                   <div className="flex justify-between items-center text-gray-500">
-                    <span className="flex items-center gap-1.5">🕒 6h 30m</span>
-                    <span className="line-through text-gray-400 font-normal">AED 1299.00</span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="material-icons text-sm text-gray-400 select-none">schedule</span>
+                      6h 30m
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <span className="material-icons text-sm text-gray-400 select-none">menu_book</span>
+                      24 Lessons
+                    </span>
                   </div>
-                  <div className="flex justify-between items-center text-gray-500">
-                    <span className="flex items-center gap-1.5">📓 24 Lessons</span>
-                    <span className="text-gray-950 font-bold text-sm">AED 399.00</span>
-                  </div>
-                  <div className="text-gray-500">
-                    <span>👥 1.2k Enrolled</span>
+                  <div className="flex items-center gap-1.5 text-gray-500">
+                    <span className="material-icons text-sm text-gray-400 select-none">group</span>
+                    1.2k Enrolled
                   </div>
                 </div>
               </div>
@@ -1183,7 +1095,7 @@ export default function Home({
 
       {/* SECTION 8: BOOK A LIVE SESSION WITH AN EXPERT COACH (New Section 4) */}
       <section className="bg-[#fcfdfd] py-16 md:py-24 border-t border-gray-50">
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-12">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
 
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-[38px] font-bold text-gray-900 tracking-tight mb-4">
@@ -1203,8 +1115,12 @@ export default function Home({
                 <div className="flex justify-between items-center mb-6">
                   <h4 className="font-bold text-gray-800 text-sm">Weekly Schedule</h4>
                   <div className="flex gap-2">
-                    <button className="w-7 h-7 rounded-full border border-gray-100 flex items-center justify-center text-xs font-bold text-gray-600 hover:bg-gray-50 cursor-pointer p-0 bg-transparent">&lt;</button>
-                    <button className="w-7 h-7 rounded-full border border-gray-100 flex items-center justify-center text-xs font-bold text-gray-600 hover:bg-gray-50 cursor-pointer p-0 bg-transparent">&gt;</button>
+                    <button className="w-7 h-7 rounded-full border border-gray-100 flex items-center justify-center text-xs font-bold text-gray-600 hover:bg-gray-50 cursor-pointer p-0 bg-transparent flex items-center justify-center">
+                      <span className="material-icons text-base">chevron_left</span>
+                    </button>
+                    <button className="w-7 h-7 rounded-full border border-gray-100 flex items-center justify-center text-xs font-bold text-gray-600 hover:bg-gray-50 cursor-pointer p-0 bg-transparent flex items-center justify-center">
+                      <span className="material-icons text-base">chevron_right</span>
+                    </button>
                   </div>
                 </div>
 
@@ -1281,8 +1197,8 @@ export default function Home({
               </div>
 
               {/* Status Alert */}
-              <div className="bg-gray-50 border border-gray-100 rounded-xl p-3 flex items-center gap-3">
-                <span className="text-gray-600 text-sm">👥</span>
+              <div className="bg-gray-50 border border-gray-100 rounded-xl p-3 flex items-center">
+                <span className="material-icons text-[#439c47] text-sm mr-2 select-none">people</span>
                 <span className="text-[11px] font-bold text-gray-800 leading-tight">2 sessions scheduled today</span>
               </div>
             </div>
@@ -1292,7 +1208,7 @@ export default function Home({
               <div>
                 <div className="flex justify-between items-center mb-6">
                   <h4 className="font-bold text-gray-800 text-sm">Upcoming Sessions</h4>
-                  <span className="text-gray-400 text-sm">📅</span>
+                  <span className="material-icons text-gray-400 text-sm select-none">calendar_month</span>
                 </div>
 
                 <div className="space-y-4">
@@ -1319,8 +1235,8 @@ export default function Home({
               <div className="bg-white border border-gray-100 rounded-[28px] p-6 flex gap-4 items-center shadow-xs hover:shadow-md transition flex-1">
                 <img src={sarahProfile} alt="Dr. Sarah Chen" className="w-16 h-16 rounded-2xl object-cover flex-shrink-0" />
                 <div>
-                  <div className="flex items-center gap-1 text-amber-500 text-[10px] font-bold mb-1">
-                    <span>★</span>
+                  <div className="flex items-center gap-1 text-[10px] font-bold mb-1">
+                    <span className="material-icons text-amber-500 text-xs select-none">star</span>
                     <span className="text-gray-700">4.2</span>
                   </div>
                   <h5 className="font-bold text-gray-900 text-sm mb-1.5">Dr. Sarah Chen</h5>
@@ -1348,7 +1264,7 @@ export default function Home({
 
 
       {/* SECTION 9: READY TO BEGIN YOUR HEALING JOURNEY (CTA BLOCK) */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="bg-[#439c47] rounded-[32px] p-12 md:p-16 lg:p-20 text-center text-white relative overflow-hidden shadow-lg shadow-green-100">
 
           <div className="absolute top-[-100px] left-[-100px] w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -1383,7 +1299,7 @@ export default function Home({
 
 
       {/* SECTION 10: FROM OUR COMMUNITY (TESTIMONIALS) */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24">
 
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-3 tracking-tight">

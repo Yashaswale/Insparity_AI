@@ -5,7 +5,7 @@ export default function AdhdLearningPathways() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO SECTION */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10 md:py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10 md:py-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold tracking-tight text-gray-900 mb-6 leading-[1.15]">
             Learn How Your<br />ADHD Brain Works
@@ -25,7 +25,7 @@ export default function AdhdLearningPathways() {
       </section>
 
       {/* SECTION 2: NOT EVERYONE LEARNS THE SAME WAY */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Content */}
           <div className="lg:col-span-7">
@@ -59,7 +59,7 @@ export default function AdhdLearningPathways() {
       </section>
 
       {/* SECTION 3: 4 CARDS GRID */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10 md:py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           {/* Card 1: Recognizing Stress Signals */}
@@ -118,7 +118,7 @@ export default function AdhdLearningPathways() {
       </section>
 
       {/* SECTION 4: THE SOLUTION SHIFT */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2 tracking-tight">The Solution Shift</h2>
@@ -167,7 +167,7 @@ export default function AdhdLearningPathways() {
       </section>
 
       {/* SECTION 5: YOUR EVOLUTION TIMELINE */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50 text-center">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50 text-center">
         <div className="max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 tracking-tight">Your Evolution Timeline</h2>
           <p className="text-gray-500 text-sm leading-relaxed max-w-xl mx-auto">Success isn't overnight, it's a series of aligned shifts.</p>

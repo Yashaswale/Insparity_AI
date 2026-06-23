@@ -1,7 +1,7 @@
 export default function Footer({ setCurrentPage }) {
   return (
-    <footer className="bg-[#f5fbf6] border-t border-gray-100 py-16 px-6 md:px-12">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+    <footer className="bg-[#f5fbf6] border-t border-gray-100 py-16 px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
         
         {/* Brand Left Column (lg:col-span-3) */}
         <div className="lg:col-span-3 flex flex-col justify-between">
@@ -21,13 +21,13 @@ export default function Footer({ setCurrentPage }) {
             {/* Social media circle/box buttons */}
             <div className="flex gap-2 mb-8">
               <a href="#" className="w-8 h-8 rounded-lg bg-white border border-gray-150 flex items-center justify-center text-gray-500 hover:text-[#3e9447] hover:border-[#3e9447] transition">
-                <span className="text-sm">✉</span>
+                <span className="material-icons text-sm select-none leading-none">mail</span>
               </a>
               <a href="#" className="w-8 h-8 rounded-lg bg-white border border-gray-150 flex items-center justify-center text-gray-500 hover:text-[#3e9447] hover:border-[#3e9447] transition">
-                <span className="text-sm">🔗</span>
+                <span className="material-icons text-sm select-none leading-none">link</span>
               </a>
               <a href="#" className="w-8 h-8 rounded-lg bg-white border border-gray-150 flex items-center justify-center text-gray-500 hover:text-[#3e9447] hover:border-[#3e9447] transition">
-                <span className="text-sm">📞</span>
+                <span className="material-icons text-sm select-none leading-none">phone</span>
               </a>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function Footer({ setCurrentPage }) {
             
             {/* Google Play Badge */}
             <a href="#" className="bg-black hover:bg-gray-950 text-white rounded-lg px-3 py-1.5 flex items-center gap-2 transition no-underline">
-              <span className="text-lg">▶</span>
+              <span className="material-icons text-base select-none leading-none">play_arrow</span>
               <div className="leading-tight text-left">
                 <span className="text-[7px] text-gray-300 block font-light uppercase tracking-wider">Get it on</span>
                 <span className="text-[10px] font-bold block">Google Play</span>

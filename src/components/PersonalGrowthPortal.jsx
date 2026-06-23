@@ -128,7 +128,7 @@ export default function PersonalGrowthPortal({
     <div className="bg-[#fafbfa] text-gray-950 font-sans selection:bg-green-100 selection:text-green-800 pb-20">
       
       {/* SECTION 1: HERO SECTION */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-6">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6">
         <div 
           className="relative rounded-[32px] overflow-hidden flex items-center bg-cover bg-right lg:bg-center min-h-[580px] lg:min-h-[660px] pb-16 lg:pb-20"
           style={{ backgroundImage: `url(${climbingCliff})` }}
@@ -175,7 +175,7 @@ export default function PersonalGrowthPortal({
       </section>
 
       {/* SECTION 2: TRANSFORMS PERSONAL GROWTH VIDEO AREA */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16 text-center">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 font-sans">
           See How Insparity AI Transforms Your Personal Growth
         </h2>
@@ -221,7 +221,7 @@ export default function PersonalGrowthPortal({
       </section>
 
       {/* SECTION 3: TURN GOALS INTO DAILY PROGRESS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 text-center">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 font-sans">
           Turn Goals Into Daily Progress
         </h2>
@@ -273,7 +273,7 @@ export default function PersonalGrowthPortal({
       </section>
 
       {/* SECTION 4: YOUR PERSONAL GROWTH COACH */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 font-sans">
             Your Personal Growth Coach
@@ -376,7 +376,7 @@ export default function PersonalGrowthPortal({
       </section>
 
       {/* SECTION 5: YOUR PERSONAL DEVELOPMENT LIBRARY */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 font-sans">
@@ -448,7 +448,7 @@ export default function PersonalGrowthPortal({
       </section>
 
       {/* SECTION 6: TRACK YOUR THOUGHTS, UNDERSTAND YOUR EMOTIONS (JOURNALING) */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 font-sans">
             Track Your Thoughts, Understand Your Emotions
@@ -584,7 +584,7 @@ export default function PersonalGrowthPortal({
       </section>
 
       {/* SECTION 7: PERSONAL GROWTH COURSES */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-4">
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 font-sans">

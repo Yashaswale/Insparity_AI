@@ -6,7 +6,7 @@ export default function CrisisProtocol() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -34,7 +34,7 @@ export default function CrisisProtocol() {
       </section>
 
       {/* SECTION 2: THREE CARDS ROW */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           {/* Card 1: Recognizing Stress Signals */}
@@ -74,7 +74,7 @@ export default function CrisisProtocol() {
       </section>
 
       {/* SECTION 3: DESIGNED TO RESPOND WITH CARE & SAFETY */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Content */}
           <div className="lg:col-span-7">
@@ -109,7 +109,7 @@ export default function CrisisProtocol() {
       </section>
 
       {/* SECTION 4: THE PATH TO CALM */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50 text-center">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50 text-center">
         <div className="max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4 tracking-tight">The Path to Calm</h2>
         </div>
@@ -148,7 +148,7 @@ export default function CrisisProtocol() {
       </section>
 
       {/* SECTION 5: EMPATHETIC RESPONSE IN ACTION */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50">
         <h2 className="text-3xl font-bold text-gray-900 mb-10 tracking-tight">Empathetic Response in Action</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">

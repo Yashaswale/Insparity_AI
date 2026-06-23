@@ -6,7 +6,7 @@ export default function ExecutiveFunctionCoach() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO & DASHBOARD CARDS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -64,7 +64,7 @@ export default function ExecutiveFunctionCoach() {
 
 
       {/* SECTION 2: WHY EXECUTIVE FUNCTION MATTERS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left Content */}
@@ -92,7 +92,7 @@ export default function ExecutiveFunctionCoach() {
 
 
       {/* SECTION 3: FROM OVERWHELMED TO ORGANIZED */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12 tracking-tight">
           From Overwhelmed to Organized
         </h2>
@@ -161,7 +161,7 @@ export default function ExecutiveFunctionCoach() {
 
       {/* SECTION 4: DO ANY OF THESE FEEL FAMILIAR? */}
       <section className="bg-gray-50/30 py-16 md:py-20 border-t border-gray-50">
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-12 text-center">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 tracking-tight">
             Do Any of These Feel Familiar?
           </h2>
@@ -196,7 +196,7 @@ export default function ExecutiveFunctionCoach() {
 
 
       {/* SECTION 5: SEE THE COACH IN ACTION */}
-      <section className="bg-white max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24 border-t border-gray-55">
+      <section className="bg-white max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24 border-t border-gray-55">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12 tracking-tight">
           See The Coach In Action
         </h2>

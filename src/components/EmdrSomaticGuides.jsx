@@ -6,7 +6,7 @@ export default function EmdrSomaticGuides() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -34,7 +34,7 @@ export default function EmdrSomaticGuides() {
       </section>
 
       {/* SECTION 2: PRACTICE WITH WELLNESS EXPERTS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2 tracking-tight">Practice With Wellness Experts</h2>
@@ -112,7 +112,7 @@ export default function EmdrSomaticGuides() {
       </section>
 
       {/* SECTION 3: GUIDED HEALING COURSES */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="flex items-end justify-between mb-10">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2 tracking-tight">Guided Healing Courses</h2>
@@ -169,7 +169,7 @@ export default function EmdrSomaticGuides() {
       </section>
 
       {/* SECTION 4: PERSONALIZED SUPPORT */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-24 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left Text */}

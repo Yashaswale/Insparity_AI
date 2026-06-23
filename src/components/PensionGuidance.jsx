@@ -9,7 +9,7 @@ export default function PensionGuidance() {
     <div className="bg-white text-gray-900 font-sans min-h-screen py-10 selection:bg-green-100 selection:text-green-800">
       
       {/* SECTION 1: HERO & PROGRESS ROADMAP */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-10">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Title & Description */}
           <div className="lg:col-span-7">
@@ -89,7 +89,7 @@ export default function PensionGuidance() {
       </section>
 
       {/* SECTION 2: BUILDING A SECURE FUTURE STARTS WITH UNDERSTANDING */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* Left Content */}
           <div className="lg:col-span-7">
@@ -109,7 +109,7 @@ export default function PensionGuidance() {
       </section>
 
       {/* SECTION 3: DIFFERENT PEOPLE. DIFFERENT FINANCIAL JOURNEYS. */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center tracking-tight">Different People. Different Financial Journeys.</h2>
         
         {/* 4 Cards Grid */}
@@ -167,7 +167,7 @@ export default function PensionGuidance() {
       </section>
 
       {/* SECTION 4: EXPLORE COMMON FINANCIAL QUESTIONS */}
-      <section className="max-w-[1440px] mx-auto px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
+      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 border-t border-gray-50">
         <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center tracking-tight">Explore Common Financial Questions</h2>
         
         {/* 6 Grid Cards */}
