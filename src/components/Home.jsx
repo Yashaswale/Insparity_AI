@@ -53,116 +53,96 @@ export default function Home({
       {/* SECTION 1: HERO SECTION */}
       <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-6 relative">
         <div
-          className="relative rounded-[32px] overflow-hidden flex items-center bg-cover bg-center min-h-[580px] lg:min-h-[660px] pb-28 lg:pb-32"
+          className="relative rounded-[32px] overflow-hidden flex flex-col justify-between bg-cover bg-center min-h-[720px] lg:min-h-[820px] p-6 md:p-12 lg:p-16"
           style={{ backgroundImage: "url('/Hero_img.png')" }}
         >
           {/* Soft overlay to ensure readability */}
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-black/75"></div>
 
-          {/* Floating Coach Badges
-          <div className="absolute top-[30%] left-[34%] bg-[#1e1b18]/70 backdrop-blur-xs text-white border border-white/10 rounded-full px-3 py-1.5 flex items-center gap-1 shadow-lg hidden md:flex select-none z-10">
-            <span className="w-5 h-5 rounded-full bg-gray-500 text-white flex items-center justify-center text-[10px] font-bold">A</span>
-            <div className="w-5 h-5 rounded-full overflow-hidden border border-white/20 -ml-1.5">
-              <img src={sarahProfile} className="w-full h-full object-cover" alt="badge" />
-            </div>
-          </div>
-          <div className="absolute bottom-[40%] left-[19%] w-9 h-9 rounded-full overflow-hidden border-2 border-white shadow-lg hidden md:block select-none z-10">
-            <img src={marcusProfile} className="w-full h-full object-cover" alt="badge" />
-          </div> */}
-
-          <div className="relative z-10 w-full flex flex-col lg:flex-row justify-between items-center gap-12 px-6 md:px-16 py-12">
+          {/* Top content (Hero title and description) */}
+          <div className="relative z-10 w-full flex flex-col lg:flex-row justify-between items-start gap-12 mt-4 md:mt-8">
             {/* Left Content */}
             <div className="text-white max-w-2xl text-left select-none">
               <h1 className="text-4xl md:text-5xl lg:text-[60px] font-bold leading-[1.12] mb-6 tracking-tight">
                 Your Whole-Life<br />Wellness Platform
               </h1>
               <p className="text-white/90 text-sm md:text-[17px] font-light leading-relaxed max-w-xl">
-                Personal Development-ADHD Trauma Care Retirement Planning AI Coaching -Kids & Seniors
+                Personal Development-ADHD Trauma Care Retirement Planning
+                <br />
+                AI Coaching -Kids & Seniors
               </p>
             </div>
-
-            {/* Right Content - Calm Sounds Card */}
-            {/* <div className="shrink-0 relative z-10 self-center">
-              <CalmSoundsCard
-                activeAmbientSound={activeAmbientSound}
-                setActiveAmbientSound={setActiveAmbientSound}
-                isAmbientPlaying={isAmbientPlaying}
-                setIsAmbientPlaying={setIsAmbientPlaying}
-                ambientVolume={ambientVolume}
-                setAmbientVolume={setAmbientVolume}
-              />
-            </div> */}
-          </div>
-        </div>
-      </section>
-
-      {/* Overlapping Category Boxes */}
-      <section className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 -mt-24 pb-8 relative z-20 select-none">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          {/* Box 1: Personal Development */}
-          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
-            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="material-icons text-sm select-none">explore</span>
-              <h4 className="font-bold text-xs uppercase tracking-wider">Personal Development</h4>
-            </div>
-            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
-              <li>• Personalised AI Assessments</li>
-              <li>• AI Executive Function Coach</li>
-              <li>• Focus tools, habit stacking, time-blocking</li>
-            </ul>
           </div>
 
-          {/* Box 2: ADHD */}
-          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
-            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="material-icons text-sm select-none">flash_on</span>
-              <h4 className="font-bold text-xs uppercase tracking-wider">ADHD</h4>
-            </div>
-            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
-              <li>• ADHD-specific learning pathways</li>
-              <li>• Behavioural pattern tracking over time</li>
-            </ul>
-          </div>
+          {/* Category Boxes inside Hero Image */}
+          <div className="relative z-10 w-full mt-12 mb-2 select-none">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {/* Box 1: Personal Development */}
+              <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+                <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
+                  <span className="material-icons text-base select-none">explore</span>
+                  <h4 className="font-semibold text-[15px]">Personal Development</h4>
+                </div>
+                <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
+                  <li>Personalised AI Assessments</li>
+                  <li>AI Executive Function Coach</li>
+                  <li>Focus tools, habit stacking, time-blocking</li>
+                </ul>
+              </div>
 
-          {/* Box 3: Mental Wellness */}
-          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
-            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="material-icons text-sm select-none">spa</span>
-              <h4 className="font-bold text-xs uppercase tracking-wider">Mental Wellness</h4>
-            </div>
-            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
-              <li>• AI Wellness Coach</li>
-              <li>• Audio & text journal with sentiment analysis</li>
-            </ul>
-          </div>
+              {/* Box 2: Trauma */}
+              <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+                <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
+                  <span className="material-icons text-base select-none">volunteer_activism</span>
+                  <h4 className="font-semibold text-[15px]">Trauma</h4>
+                </div>
+                <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
+                  <li>Trauma-informed learning</li>
+                  <li>Grounding & regulation exercises</li>
+                  <li>Crisis-aware escalation protocol</li>
+                  <li>EMDR, somatic therapy guides</li>
+                </ul>
+              </div>
 
-          {/* Box 4: Trauma */}
-          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
-            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="material-icons text-sm select-none">shield</span>
-              <h4 className="font-bold text-xs uppercase tracking-wider">Trauma</h4>
-            </div>
-            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
-              <li>• Trauma-informed learning</li>
-              <li>• Grounding & regulation exercises</li>
-              <li>• Crisis-aware escalation protocol</li>
-              <li>• EMDR, somatic therapy guides</li>
-            </ul>
-          </div>
+              {/* Box 3: ADHD */}
+              <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+                <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
+                  <span className="material-icons text-base select-none">flash_on</span>
+                  <h4 className="font-semibold text-[15px]">ADHD</h4>
+                </div>
+                <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
+                  <li>ADHD-specific learning pathways</li>
+                  <li>Behavioural pattern tracking over time</li>
+                </ul>
+              </div>
 
-          {/* Box 5: Retirement & Life plan */}
-          <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
-            <div className="flex items-center gap-2 text-[#3e9447] mb-3">
-              <span className="material-icons text-sm select-none">elderly</span>
-              <h4 className="font-bold text-xs uppercase tracking-wider">Retirement & Life plan</h4>
+              {/* Box 4: Mental Wellness */}
+              <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+                <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
+                  <span className="material-icons text-base select-none">spa</span>
+                  <h4 className="font-semibold text-[15px]">Mental Wellness</h4>
+                </div>
+                <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
+                  <li>AI Wellness Coach</li>
+                  <li>Audio & text journal with sentiment analysis</li>
+                </ul>
+              </div>
+
+              {/* Box 5: Retirement & Life plan */}
+              <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+                <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
+                  <span className="material-icons text-base select-none">sailing</span>
+                  <h4 className="font-semibold text-[15px]">Retirement & Life plan</h4>
+                </div>
+                <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
+                  <li>AI Retirement Planning Advisor</li>
+                  <li>Pension, savings & investment guidance</li>
+                  <li>Personalised financial scenario modelling</li>
+                  <li>Legacy planning & estate conversations</li>
+                  <li>Senior wellbeing & cognitive health tools</li>
+                </ul>
+              </div>
             </div>
-            <ul className="text-[11px] text-gray-500 space-y-2 list-none p-0 m-0 leading-relaxed">
-              <li>• AI Retirement Planning Advisor</li>
-              <li>• Pension, savings & investment guidance</li>
-              <li>• Personalised financial scenario modelling</li>
-              <li>• Legacy planning & estate conversations</li>
-              <li>• Senior wellbeing & cognitive health tools</li>
-            </ul>
           </div>
         </div>
       </section>
@@ -182,13 +162,13 @@ export default function Home({
         {/* 5-Column Grid with Responsive Columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
 
-          {/* Card 1: AI Nadeem */}
+          {/* Card 1: Al Kabeer */}
           <div className="bg-white border border-gray-100 rounded-[28px] p-5 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
             <div className="w-full flex flex-col items-center">
               <div className="w-full h-40 rounded-2xl overflow-hidden mb-5">
-                <img src="/Agents/Agent1.png" className="w-full h-full object-cover" alt="AI Nadeem" />
+                <img src="/Agents/Agent2.png" className="w-full h-full object-cover" alt="Al Kabeer" />
               </div>
-              <h3 className="font-bold text-[#111827] text-lg mb-1">AI Nadeem</h3>
+              <h3 className="font-bold text-[#111827] text-lg mb-1">Al Kabeer</h3>
               <p className="text-gray-400 text-xs mb-4">Personal Development Coach</p>
 
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
@@ -209,13 +189,13 @@ export default function Home({
             </button>
           </div>
 
-          {/* Card 2: AI Kabeer */}
+          {/* Card 2: Al Nadeem */}
           <div className="bg-white border border-gray-100 rounded-[28px] p-5 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
             <div className="w-full flex flex-col items-center">
               <div className="w-full h-40 rounded-2xl overflow-hidden mb-5">
-                <img src="/Agents/Agent2.png" className="w-full h-full object-cover" alt="AI Kabeer" />
+                <img src="/Agents/Agent1.png" className="w-full h-full object-cover" alt="Al Nadeem" />
               </div>
-              <h3 className="font-bold text-[#111827] text-lg mb-1">AI Kabeer</h3>
+              <h3 className="font-bold text-[#111827] text-lg mb-1">Al Nadeem</h3>
               <p className="text-gray-400 text-xs mb-4">Trauma, ADHD & Focus Coach</p>
 
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
@@ -236,13 +216,13 @@ export default function Home({
             </button>
           </div>
 
-          {/* Card 3: AI hakeem */}
+          {/* Card 3: Al hakeem */}
           <div className="bg-white border border-gray-100 rounded-[28px] p-5 flex flex-col justify-between items-center text-center shadow-xs hover:shadow-md transition duration-300">
             <div className="w-full flex flex-col items-center">
               <div className="w-full h-40 rounded-2xl overflow-hidden mb-5">
-                <img src="/Agents/Agent3.png" className="w-full h-full object-cover" alt="AI hakeem" />
+                <img src="/Agents/Agent3.png" className="w-full h-full object-cover" alt="Al hakeem" />
               </div>
-              <h3 className="font-bold text-[#111827] text-lg mb-1">AI hakeem</h3>
+              <h3 className="font-bold text-[#111827] text-lg mb-1">Al hakeem</h3>
               <p className="text-gray-400 text-xs mb-4">Retirement & Wellness AI</p>
 
               <div className="bg-[#f0fdf4] text-[#2f7a37] text-[11px] font-medium px-4 py-2.5 rounded-xl w-full mb-6 min-h-[54px] flex items-center justify-center leading-normal">
