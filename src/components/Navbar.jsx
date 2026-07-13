@@ -12,41 +12,40 @@ const COACH_CATEGORIES = [
     ],
   },
   {
-    id: 'adhd',
-    label: 'ADHD',
-    items: [
-      { label: 'ADHD-specific learning pathways', page: 'adhd-learning-pathways' },
-      { label: 'Behavioural pattern tracking over time', page: 'behavioural-pattern-tracking' },
-    ],
-  },
-  {
-    id: 'mental-wellness',
-    label: 'Mental Wellness',
-    items: [
-      { label: 'AI Wellness Coach', page: 'ai-wellness-coach' },
-      { label: 'Audio & text journal with sentiment analysis', page: 'audio-text-journal' },
-    ],
-  },
-  {
-    id: 'trauma',
-    label: 'Trauma',
+    id: 'trauma-adhd',
+    label: 'Trauma & ADHD',
     items: [
       { label: 'Trauma-informed learning', page: 'trauma-informed-learning' },
       { label: 'Grounding & regulation exercises', page: 'grounding-exercises' },
       { label: 'Crisis-aware escalation protocol', page: 'crisis-protocol' },
       { label: 'EMDR, somatic therapy guides', page: 'emdr-somatic-guides' },
+      { label: 'ADHD-specific learning pathways', page: 'adhd-learning-pathways' },
     ],
   },
   {
-    id: 'retirement-life',
-    label: 'Retirement & Life Planning',
+    id: 'retirement-wellness',
+    label: 'Retirement & Wellness',
     items: [
+      { label: 'AI Wellness Coach', page: 'ai-wellness-coach' },
+      { label: 'Behavioural pattern tracking over time', page: 'behavioural-pattern-tracking' },
+      { label: 'Audio & text journal with sentiment analysis', page: 'audio-text-journal' },
       { label: 'AI Retirement Planning Advisor', page: 'ai-retirement-advisor' },
+    ],
+  },
+  {
+    id: 'children-emotional',
+    label: 'Children Emotional',
+    items: [
+      { label: 'Wellbeing & cognitive health tools', page: null },
+    ],
+  },
+  {
+    id: 'leadership-performance',
+    label: 'Leadership & Performance',
+    items: [
       { label: 'Pension, savings & investment guidance', page: 'pension-guidance' },
-      { label: 'Life transition coaching', page: 'life-transition-coaching' },
       { label: 'Personalised financial scenario modelling', page: null },
       { label: 'Legacy planning & estate conversations', page: null },
-      { label: 'Senior wellbeing & cognitive health tools', page: null },
     ],
   },
 ]

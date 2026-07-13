@@ -90,56 +90,56 @@ export default function Home({
                 </ul>
               </div>
 
-              {/* Box 2: Trauma */}
+              {/* Box 2: Trauma & ADHD */}
               <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
                 <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
                   <span className="material-icons text-base select-none">volunteer_activism</span>
-                  <h4 className="font-semibold text-[15px]">Trauma</h4>
+                  <h4 className="font-semibold text-[15px]">Trauma & ADHD</h4>
                 </div>
                 <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
                   <li>Trauma-informed learning</li>
                   <li>Grounding & regulation exercises</li>
                   <li>Crisis-aware escalation protocol</li>
                   <li>EMDR, somatic therapy guides</li>
+                  <li>ADHD-specific learning pathways</li>
                 </ul>
               </div>
 
-              {/* Box 3: ADHD */}
+              {/* Box 3: Retirement & Wellness */}
               <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
                 <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
                   <span className="material-icons text-base select-none">flash_on</span>
-                  <h4 className="font-semibold text-[15px]">ADHD</h4>
-                </div>
-                <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
-                  <li>ADHD-specific learning pathways</li>
-                  <li>Behavioural pattern tracking over time</li>
-                </ul>
-              </div>
-
-              {/* Box 4: Mental Wellness */}
-              <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
-                <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
-                  <span className="material-icons text-base select-none">spa</span>
-                  <h4 className="font-semibold text-[15px]">Mental Wellness</h4>
+                  <h4 className="font-semibold text-[15px]">Retirement & Wellness</h4>
                 </div>
                 <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
                   <li>AI Wellness Coach</li>
+                  <li>Behavioural pattern tracking over time</li>
                   <li>Audio & text journal with sentiment analysis</li>
+                  <li>AI Retirement Planning Advisor</li>
                 </ul>
               </div>
 
-              {/* Box 5: Retirement & Life plan */}
+              {/* Box 4: Children Emotional */}
+              <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
+                <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
+                  <span className="material-icons text-base select-none">spa</span>
+                  <h4 className="font-semibold text-[15px]">Children Emotional</h4>
+                </div>
+                <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
+                  <li>Wellbeing & cognitive health tools</li>
+                </ul>
+              </div>
+
+              {/* Box 5: Leadership & Performance */}
               <div className="bg-white border border-gray-100 rounded-3xl p-5 shadow-xl hover:translate-y-[-4px] transition duration-300 flex flex-col min-h-[220px]">
                 <div className="flex items-center gap-2 text-[#2f7a37] mb-3">
                   <span className="material-icons text-base select-none">sailing</span>
-                  <h4 className="font-semibold text-[15px]">Retirement & Life plan</h4>
+                  <h4 className="font-semibold text-[15px]">Leadership & Performance</h4>
                 </div>
                 <ul className="text-[12px] text-gray-600 space-y-2.5 list-none p-0 m-0 leading-relaxed">
-                  <li>AI Retirement Planning Advisor</li>
                   <li>Pension, savings & investment guidance</li>
                   <li>Personalised financial scenario modelling</li>
                   <li>Legacy planning & estate conversations</li>
-                  <li>Senior wellbeing & cognitive health tools</li>
                 </ul>
               </div>
             </div>

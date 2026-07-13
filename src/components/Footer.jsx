@@ -55,55 +55,67 @@ export default function Footer({ setCurrentPage }) {
         </div>
 
         {/* Directory Grid Columns (lg:col-span-9) */}
-        <div className="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           
           {/* Column 1: Personal Development */}
           <div>
             <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-5">
-              Personal Development & ADHD
+              Personal Development
             </h4>
             <ul className="space-y-4 text-xs text-gray-500 font-medium list-none p-0">
-              {/* Typo preserved: ADHA-Specific */}
-              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('adhd-learning-pathways'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">ADHA-Specific Learning Pathways</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('personalised-assessments'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Personalised AI Assessments</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('executive-function-coach'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">AI Executive Function Coach</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('focus-tools'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Focus Tools, Habit Stacking, Time-Blocking</a></li>
-              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('personalised-assessments'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Personalised AI Assessments</a></li>
-              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('behavioural-pattern-tracking'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Behavioural Pattern Tracking Over Time</a></li>
-              <li><a href="#" className="hover:text-[#3e9447] transition-colors leading-relaxed block">Neurodiversity-Affirming Content Library</a></li>
             </ul>
           </div>
 
-          {/* Column 2: Trauma & Mental Wellness */}
+          {/* Column 2: Trauma & ADHD */}
           <div>
             <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-5">
-              Trauma & Mental Wellness
+              Trauma & ADHD
             </h4>
             <ul className="space-y-4 text-xs text-gray-500 font-medium list-none p-0">
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('trauma-informed-learning'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Trauma-Informed Learning</a></li>
-              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('ai-wellness-coach'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">AI Wellness Coach</a></li>
-              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('audio-text-journal'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Audio & Text Journal With Sentiment Analysis</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('grounding-exercises'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Grounding & Regulation Exercises</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('crisis-protocol'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Crisis-Aware Escalation Protocol</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('emdr-somatic-guides'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">EMDR, Somatic Therapy Guides</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('adhd-learning-pathways'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">ADHD-Specific Learning Pathways</a></li>
             </ul>
           </div>
 
-          {/* Column 3: Retirement & Life Planning */}
+          {/* Column 3: Retirement & Wellness */}
           <div>
             <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-5">
-              Retirement & Life Planning
+              Retirement & Wellness
             </h4>
             <ul className="space-y-4 text-xs text-gray-500 font-medium list-none p-0">
+              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('ai-wellness-coach'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">AI Wellness Coach</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('behavioural-pattern-tracking'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Behavioural Pattern Tracking Over Time</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('audio-text-journal'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Audio & Text Journal With Sentiment Analysis</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('ai-retirement-advisor'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">AI Retirement Planning Advisor</a></li>
-              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('pension-guidance'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Pension, Savings & Investment Guidance</a></li>
-              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('life-transition-coaching'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Life Transition Coaching</a></li>
-              <li><a href="#" className="hover:text-[#3e9447] transition-colors leading-relaxed block">Personalised Financial Scenario Modelling</a></li>
-              <li><a href="#" className="hover:text-[#3e9447] transition-colors leading-relaxed block">Legacy Planning & Estate Conversations</a></li>
-              <li><a href="#" className="hover:text-[#3e9447] transition-colors leading-relaxed block">Senior Wellbeing & Cognitive Health Tools</a></li>
             </ul>
           </div>
 
-          {/* Column 4: Other */}
+          {/* Column 4: Children & Leadership */}
+          <div>
+            <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-3">
+              Children Emotional
+            </h4>
+            <ul className="space-y-4 text-xs text-gray-500 font-medium list-none p-0 mb-6">
+              <li><a href="#" className="hover:text-[#3e9447] transition-colors leading-relaxed block">Wellbeing & Cognitive Health Tools</a></li>
+            </ul>
+
+            <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-3">
+              Leadership & Performance
+            </h4>
+            <ul className="space-y-4 text-xs text-gray-500 font-medium list-none p-0">
+              <li><a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage && setCurrentPage('pension-guidance'); }} className="hover:text-[#3e9447] transition-colors leading-relaxed block">Pension, Savings & Investment Guidance</a></li>
+              <li><a href="#" className="hover:text-[#3e9447] transition-colors leading-relaxed block">Personalised Financial Scenario Modelling</a></li>
+              <li><a href="#" className="hover:text-[#3e9447] transition-colors leading-relaxed block">Legacy Planning & Estate Conversations</a></li>
+            </ul>
+          </div>
+
+          {/* Column 5: Other */}
           <div>
             <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wider mb-5">
               Other
