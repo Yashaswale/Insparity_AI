@@ -32,7 +32,7 @@ export default function CalmSoundsCard({
       {/* Title */}
       <div className="flex items-center gap-2 mb-1.5">
         <span className="text-green-600 text-sm">🎵</span>
-        <h4 className="font-bold text-sm text-gray-900 leading-none">Clam sounds</h4>
+        <h4 className="font-bold text-sm text-gray-900 leading-none">Calm sounds</h4>
       </div>
       <p className="text-gray-400 text-[10px] leading-tight mb-4 font-light">
         Background ambience to help you focus and settle.
@@ -46,11 +46,10 @@ export default function CalmSoundsCard({
             <button
               key={sound.id}
               onClick={() => handleSoundSelect(sound.id)}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold border transition text-left cursor-pointer ${
-                isActive 
-                  ? 'bg-[#f0fdf4] border-[#439c47] text-[#2f7a37]' 
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold border transition text-left cursor-pointer ${isActive
+                  ? 'bg-[#f0fdf4] border-[#439c47] text-[#2f7a37]'
                   : 'bg-white border-gray-100 text-gray-700 hover:bg-gray-50'
-              }`}
+                }`}
             >
               <span className="text-sm select-none">{sound.icon}</span>
               <span>{sound.name}</span>

@@ -62,7 +62,7 @@ export default function Navbar({
   ambientVolume,
   setAmbientVolume
 }) {
-  const [showSoundsOverlay, setShowSoundsOverlay] = useState(false)
+  const [showSoundsOverlay, setShowSoundsOverlay] = useState(true)
   const [isCoachDropdownOpen, setIsCoachDropdownOpen] = useState(false)
   const [activeCategory, setActiveCategory] = useState('personal-development')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)

@@ -25,8 +25,8 @@ function App() {
   const [userEmail, setUserEmail] = useState('')
 
   // Ambient sound states
-  const [activeAmbientSound, setActiveAmbientSound] = useState(null)
-  const [isAmbientPlaying, setIsAmbientPlaying] = useState(false)
+  const [activeAmbientSound, setActiveAmbientSound] = useState('rain')
+  const [isAmbientPlaying, setIsAmbientPlaying] = useState(true)
   const [ambientVolume, setAmbientVolume] = useState(0.5)
 
   // Handle ambient sound playback trigger
@@ -34,12 +34,44 @@ function App() {
     const audio = document.getElementById('global-ambient-audio')
     if (!audio) return
 
+    const playAudio = () => {
+      if (isAmbientPlaying && activeAmbientSound) {
+        audio.play().then(() => {
+          cleanupListeners()
+        }).catch(err => {
+          console.warn('Audio playback attempt failed:', err)
+        })
+      }
+    }
+
+    const handleInteraction = () => {
+      playAudio()
+    }
+
+    const cleanupListeners = () => {
+      window.removeEventListener('click', handleInteraction)
+      window.removeEventListener('keydown', handleInteraction)
+      window.removeEventListener('touchstart', handleInteraction)
+    }
+
     if (isAmbientPlaying && activeAmbientSound) {
+      // Ensure volume is set correctly
+      audio.volume = ambientVolume
+      
       audio.play().catch(err => {
-        console.warn('Audio playback was prevented by browser policy. Interacting with the page is required first.', err)
+        console.warn('Autoplay blocked by browser. Music will play upon first interaction.', err)
+        // Add listeners for interaction to trigger play
+        window.addEventListener('click', handleInteraction)
+        window.addEventListener('keydown', handleInteraction)
+        window.addEventListener('touchstart', handleInteraction)
       })
     } else {
       audio.pause()
+      cleanupListeners()
+    }
+
+    return () => {
+      cleanupListeners()
     }
   }, [isAmbientPlaying, activeAmbientSound])
 
